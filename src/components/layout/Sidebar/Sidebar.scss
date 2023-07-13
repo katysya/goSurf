@@ -6,4 +6,17 @@
   flex-direction: column;
   width: 200px;
   position: fixed;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
 }
