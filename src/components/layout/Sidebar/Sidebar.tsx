@@ -1,11 +1,17 @@
 import Link from 'next/link';
 import './Sidebar.scss';
+import Image from 'next/image';
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
       <Link href="/" className="sidebar__logo">
-        <div className=""></div>
+        <div className="sidebar__logo-top">
+          <p className="sidebar__logo-text">surf</p>
+        </div>
+        <div className="sidebar__logo-bottom">
+          <p className="sidebar__logo-text">Go</p>
+        </div>
       </Link>
       <ul className="sidebar__list">
         <li>
@@ -274,6 +280,17 @@ export default function Sidebar() {
           </Link>
         </li>
       </ul>
+      <div className="sidebar__location">
+        <div className="sidebar__location-icon">
+          <Image
+            src="@/location.svg"
+            width={50}
+            height={100}
+            alt="Picture of the author"
+          />
+        </div>
+        <div className="sidebar__location-city">California</div>
+      </div>
     </div>
   );
 }
