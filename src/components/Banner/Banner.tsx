@@ -1,16 +1,8 @@
-import Image from 'next/image';
 import './banner.scss';
 
 export default function Banner() {
   return (
     <section className="banner">
-      {/* <Image
-      src="banner.jpg"
-      width={500}
-      height={500}
-      alt="Banner"
-    /> */}
-
       <div className="banner__bottom">
         <div className="banner__bottom-block">
           <div className="banner__name">

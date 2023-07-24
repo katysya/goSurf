@@ -1,0 +1,21 @@
+.mainSwiper {
+  height: 100vh;
+
+  &__navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+
+    &-btn {
+      background-color: transparent;
+      cursor: pointer;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

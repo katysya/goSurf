@@ -5,8 +5,11 @@
   border-right: 1px solid rgba(255, 255, 255, 0.25);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 200px;
+  height: 100vh;
   position: fixed;
+  padding-bottom: 47px;
 
   &__logo {
     display: flex;
@@ -52,6 +55,12 @@
     }
   }
 
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -63,6 +72,40 @@
     flex-direction: column;
     gap: 6px;
     align-items: center;
+    transition: opacity 0.2s;
+
+    &-img {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__date {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    &-number {
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 64px;
+      text-transform: uppercase;
+    }
+
+    &-monthAndYear {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 19px;
+    }
   }
 
   &__location {
@@ -71,5 +114,11 @@
     align-items: center;
     gap: 8px;
     justify-content: center;
+
+    &-icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
 }
