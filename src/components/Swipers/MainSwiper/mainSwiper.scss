@@ -1,5 +1,20 @@
 .mainSwiper {
   height: 100vh;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      62.09% 62.09% at 42.87% 49.23%,
+      rgba(34, 34, 34, 0.43) 0%,
+      #0f0f0f 100%
+    );
+    top: 0;
+    z-index: 5;
+  }
 
   &__navigation {
     display: flex;
@@ -7,6 +22,10 @@
     align-items: center;
     gap: 20px;
     justify-content: flex-end;
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    z-index: 10;
 
     &-btn {
       background-color: transparent;
@@ -15,6 +34,23 @@
 
       &:hover {
         opacity: 0.6;
+      }
+    }
+  }
+
+  &__swiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper {
+      height: 100%;
+
+      &-slide {
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
