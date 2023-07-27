@@ -1,0 +1,21 @@
+.beachSwiper {
+  height: 100vh;
+  &__swiper {
+    padding: 50px 0;
+
+    .swiper-pagination {
+      top: calc(100% - 50px);
+    }
+
+    .swiper-slide {
+      height: 700px;
+      width: 200px;
+      background-color: aqua;
+      position: relative;
+
+      &:nth-child(2n) {
+        background-color: red;
+      }
+    }
+  }
+}

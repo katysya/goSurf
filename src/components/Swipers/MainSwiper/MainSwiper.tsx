@@ -39,6 +39,7 @@ export default function MainSwiper() {
       <div className="mainSwiper__swiper">
         <Swiper
           modules={[Navigation, Pagination]}
+          pagination={true}
           spaceBetween={50}
           slidesPerView={1}
           loop

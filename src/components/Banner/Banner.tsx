@@ -1,8 +1,11 @@
+import MainSwiper from '../Swipers/MainSwiper/MainSwiper';
+
 import './banner.scss';
 
 export default function Banner() {
   return (
     <section className="banner">
+      <MainSwiper />
       <div className="banner__bottom">
         <div className="banner__bottom-block">
           <div className="banner__name">

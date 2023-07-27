@@ -1,6 +1,8 @@
 .mainSwiper {
   height: 100vh;
   position: relative;
+  top: 0;
+  z-index: 1;
 
   &::after {
     content: '';
@@ -13,7 +15,7 @@
       #0f0f0f 100%
     );
     top: 0;
-    z-index: 5;
+    z-index: 2;
   }
 
   &__navigation {
