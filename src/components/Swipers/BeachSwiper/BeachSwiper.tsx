@@ -52,7 +52,8 @@ export default function BeachSwiper() {
           autoplay={{
             delay: 2500,
           }}
-          modules={[Autoplay, EffectFade, Navigation, Pagination]}
+          // modules={[Autoplay, EffectFade, Navigation, Pagination]}
+          modules={[EffectFade, Navigation, Pagination]}
           slidesPerView={4}
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
@@ -73,8 +74,10 @@ export default function BeachSwiper() {
                 objectFit="cover"
                 alt=""
               />
-              <div className="beachSwiper__swiper-place">
-                California | USA
+              <div className="beachSwiper__swiper-block">
+                <div className="beachSwiper__swiper-place">
+                  California | USA
+                </div>
               </div>
             </a>
           </SwiperSlide>
@@ -93,8 +96,10 @@ export default function BeachSwiper() {
                 objectFit="cover"
                 alt=""
               />
-              <div className="beachSwiper__swiper-place">
-                Queensland | Australia
+              <div className="beachSwiper__swiper-block">
+                <div className="beachSwiper__swiper-place">
+                  Queensland | Australia
+                </div>
               </div>
             </a>
           </SwiperSlide>
@@ -113,8 +118,10 @@ export default function BeachSwiper() {
                 objectFit="cover"
                 alt=""
               />
-              <div className="beachSwiper__swiper-place">
-                Siargao | Philippines
+              <div className="beachSwiper__swiper-block">
+                <div className="beachSwiper__swiper-place">
+                  Siargao | Philippines
+                </div>
               </div>
             </a>
           </SwiperSlide>
@@ -133,8 +140,10 @@ export default function BeachSwiper() {
                 objectFit="cover"
                 alt=""
               />
-              <div className="beachSwiper__swiper-place">
-                Hossegor | France
+              <div className="beachSwiper__swiper-block">
+                <div className="beachSwiper__swiper-place">
+                  Hossegor | France
+                </div>
               </div>
             </a>
           </SwiperSlide>
@@ -153,8 +162,10 @@ export default function BeachSwiper() {
                 objectFit="cover"
                 alt=""
               />
-              <div className="beachSwiper__swiper-place">
-                California | USA
+              <div className="beachSwiper__swiper-block">
+                <div className="beachSwiper__swiper-place">
+                  California | USA
+                </div>
               </div>
             </a>
           </SwiperSlide>
@@ -173,8 +184,10 @@ export default function BeachSwiper() {
                 objectFit="cover"
                 alt=""
               />
-              <div className="beachSwiper__swiper-place">
-                Siargao | Philippines
+              <div className="beachSwiper__swiper-block">
+                <div className="beachSwiper__swiper-place">
+                  Siargao | Philippines
+                </div>
               </div>
             </a>
           </SwiperSlide>
@@ -193,8 +206,10 @@ export default function BeachSwiper() {
                 objectFit="cover"
                 alt=""
               />
-              <div className="beachSwiper__swiper-place">
-                Siargao | Philippines
+              <div className="beachSwiper__swiper-block">
+                <div className="beachSwiper__swiper-place">
+                  Siargao | Philippines
+                </div>
               </div>
             </a>
           </SwiperSlide>
@@ -213,8 +228,10 @@ export default function BeachSwiper() {
                 objectFit="cover"
                 alt=""
               />
-              <div className="beachSwiper__swiper-place">
-                Siargao | Philippines
+              <div className="beachSwiper__swiper-block">
+                <div className="beachSwiper__swiper-place">
+                  Siargao | Philippines
+                </div>
               </div>
             </a>
           </SwiperSlide>
