@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef } from 'react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import Image from 'next/image';
+import Logo from '@/components/UX/Logo/Logo';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -65,18 +66,26 @@ export default function BeachSwiper() {
               target="_blank"
               className="beachSwiper__swiper-slide"
             >
-              <div className="beachSwiper__swiper-name">
-                Malibu Beach
-              </div>
               <Image
                 src={Slide1}
-                layout="fill"
-                objectFit="cover"
+                fill
                 alt=""
+                sizes="100vw"
+                className="beachSwiper__swiper-img"
               />
-              <div className="beachSwiper__swiper-block">
-                <div className="beachSwiper__swiper-place">
-                  California | USA
+              <div className="beachSwiper__swiper-content">
+                <div className="beachSwiper__swiper-name">
+                  Malibu Beach
+                </div>
+                <div className="beachSwiper__swiper-bottom">
+                  <div className="beachSwiper__swiper-block">
+                    <div className="beachSwiper__swiper-place">
+                      California | USA
+                    </div>
+                  </div>
+                  <div className="beachSwiper__swiper-logo">
+                    <Logo leftText="View" rightText="Surf" />
+                  </div>
                 </div>
               </div>
             </a>
@@ -87,18 +96,26 @@ export default function BeachSwiper() {
               target="_blank"
               className="beachSwiper__swiper-slide"
             >
-              <div className="beachSwiper__swiper-name">
-                Airlie Beach
-              </div>
               <Image
                 src={Slide2}
-                layout="fill"
-                objectFit="cover"
+                fill
                 alt=""
+                sizes="100vw"
+                className="beachSwiper__swiper-img"
               />
-              <div className="beachSwiper__swiper-block">
-                <div className="beachSwiper__swiper-place">
-                  Queensland | Australia
+              <div className="beachSwiper__swiper-content">
+                <div className="beachSwiper__swiper-name">
+                  Airlie Beach
+                </div>
+                <div className="beachSwiper__swiper-bottom">
+                  <div className="beachSwiper__swiper-block">
+                    <div className="beachSwiper__swiper-place">
+                      Queensland | Australia
+                    </div>
+                  </div>
+                  <div className="beachSwiper__swiper-logo">
+                    <Logo leftText="View" rightText="Surf" />
+                  </div>
                 </div>
               </div>
             </a>
@@ -109,18 +126,26 @@ export default function BeachSwiper() {
               target="_blank"
               className="beachSwiper__swiper-slide"
             >
-              <div className="beachSwiper__swiper-name">
-                Cloud Nine
-              </div>
               <Image
                 src={Slide3}
-                layout="fill"
-                objectFit="cover"
+                fill
                 alt=""
+                sizes="100vw"
+                className="beachSwiper__swiper-img"
               />
-              <div className="beachSwiper__swiper-block">
-                <div className="beachSwiper__swiper-place">
-                  Siargao | Philippines
+              <div className="beachSwiper__swiper-content">
+                <div className="beachSwiper__swiper-name">
+                  Cloud Nine
+                </div>
+                <div className="beachSwiper__swiper-bottom">
+                  <div className="beachSwiper__swiper-block">
+                    <div className="beachSwiper__swiper-place">
+                      Siargao | Philippines
+                    </div>
+                  </div>
+                  <div className="beachSwiper__swiper-logo">
+                    <Logo leftText="View" rightText="Surf" />
+                  </div>
                 </div>
               </div>
             </a>
@@ -131,18 +156,26 @@ export default function BeachSwiper() {
               target="_blank"
               className="beachSwiper__swiper-slide"
             >
-              <div className="beachSwiper__swiper-name">
-                Vieux Boucau
-              </div>
               <Image
                 src={Slide4}
-                layout="fill"
-                objectFit="cover"
+                fill
                 alt=""
+                sizes="100vw"
+                className="beachSwiper__swiper-img"
               />
-              <div className="beachSwiper__swiper-block">
-                <div className="beachSwiper__swiper-place">
-                  Hossegor | France
+              <div className="beachSwiper__swiper-content">
+                <div className="beachSwiper__swiper-name">
+                  Vieux Boucau
+                </div>
+                <div className="beachSwiper__swiper-bottom">
+                  <div className="beachSwiper__swiper-block">
+                    <div className="beachSwiper__swiper-place">
+                      Hossegor | France
+                    </div>
+                  </div>
+                  <div className="beachSwiper__swiper-logo">
+                    <Logo leftText="View" rightText="Surf" />
+                  </div>
                 </div>
               </div>
             </a>
@@ -153,18 +186,26 @@ export default function BeachSwiper() {
               target="_blank"
               className="beachSwiper__swiper-slide"
             >
-              <div className="beachSwiper__swiper-name">
-                Malibu Beach
-              </div>
               <Image
                 src={Slide1}
-                layout="fill"
-                objectFit="cover"
+                fill
                 alt=""
+                sizes="100vw"
+                className="beachSwiper__swiper-img"
               />
-              <div className="beachSwiper__swiper-block">
-                <div className="beachSwiper__swiper-place">
-                  California | USA
+              <div className="beachSwiper__swiper-content">
+                <div className="beachSwiper__swiper-name">
+                  Malibu Beach
+                </div>
+                <div className="beachSwiper__swiper-bottom">
+                  <div className="beachSwiper__swiper-block">
+                    <div className="beachSwiper__swiper-place">
+                      California | USA
+                    </div>
+                  </div>
+                  <div className="beachSwiper__swiper-logo">
+                    <Logo leftText="View" rightText="Surf" />
+                  </div>
                 </div>
               </div>
             </a>
@@ -175,18 +216,26 @@ export default function BeachSwiper() {
               target="_blank"
               className="beachSwiper__swiper-slide"
             >
-              <div className="beachSwiper__swiper-name">
-                Airlie Beach
-              </div>
               <Image
                 src={Slide2}
-                layout="fill"
-                objectFit="cover"
+                fill
                 alt=""
+                sizes="100vw"
+                className="beachSwiper__swiper-img"
               />
-              <div className="beachSwiper__swiper-block">
-                <div className="beachSwiper__swiper-place">
-                  Siargao | Philippines
+              <div className="beachSwiper__swiper-content">
+                <div className="beachSwiper__swiper-name">
+                  Airlie Beach
+                </div>
+                <div className="beachSwiper__swiper-bottom">
+                  <div className="beachSwiper__swiper-block">
+                    <div className="beachSwiper__swiper-place">
+                      Queensland | Australia
+                    </div>
+                  </div>
+                  <div className="beachSwiper__swiper-logo">
+                    <Logo leftText="View" rightText="Surf" />
+                  </div>
                 </div>
               </div>
             </a>
@@ -197,18 +246,26 @@ export default function BeachSwiper() {
               target="_blank"
               className="beachSwiper__swiper-slide"
             >
-              <div className="beachSwiper__swiper-name">
-                Cloud Nine
-              </div>
               <Image
                 src={Slide3}
-                layout="fill"
-                objectFit="cover"
+                fill
                 alt=""
+                sizes="100vw"
+                className="beachSwiper__swiper-img"
               />
-              <div className="beachSwiper__swiper-block">
-                <div className="beachSwiper__swiper-place">
-                  Siargao | Philippines
+              <div className="beachSwiper__swiper-content">
+                <div className="beachSwiper__swiper-name">
+                  Cloud Nine
+                </div>
+                <div className="beachSwiper__swiper-bottom">
+                  <div className="beachSwiper__swiper-block">
+                    <div className="beachSwiper__swiper-place">
+                      Siargao | Philippines
+                    </div>
+                  </div>
+                  <div className="beachSwiper__swiper-logo">
+                    <Logo leftText="View" rightText="Surf" />
+                  </div>
                 </div>
               </div>
             </a>
@@ -219,18 +276,26 @@ export default function BeachSwiper() {
               target="_blank"
               className="beachSwiper__swiper-slide"
             >
-              <div className="beachSwiper__swiper-name">
-                Vieux Boucau
-              </div>
               <Image
                 src={Slide4}
-                layout="fill"
-                objectFit="cover"
+                fill
                 alt=""
+                sizes="100vw"
+                className="beachSwiper__swiper-img"
               />
-              <div className="beachSwiper__swiper-block">
-                <div className="beachSwiper__swiper-place">
-                  Siargao | Philippines
+              <div className="beachSwiper__swiper-content">
+                <div className="beachSwiper__swiper-name">
+                  Vieux Boucau
+                </div>
+                <div className="beachSwiper__swiper-bottom">
+                  <div className="beachSwiper__swiper-block">
+                    <div className="beachSwiper__swiper-place">
+                      Hossegor | France
+                    </div>
+                  </div>
+                  <div className="beachSwiper__swiper-logo">
+                    <Logo leftText="View" rightText="Surf" />
+                  </div>
                 </div>
               </div>
             </a>
