@@ -1,4 +1,5 @@
 'use client';
+import React, { useState } from 'react';
 import {
   Autoplay,
   EffectFade,
@@ -26,6 +27,69 @@ import Slide4 from '../../../assets/images/beachSwiper/img4.jpg';
 export default function BeachSwiper() {
   const swiperRef = useRef<SwiperCore>();
 
+  const [dataSwiper, setDataSwiper] = useState([
+    {
+      id: 1,
+      nameBeach: 'Malibu Beach',
+      textBeach: 'California | USA',
+      picture: Slide1,
+      href: '#',
+    },
+    {
+      id: 2,
+      nameBeach: ' Airlie Beach',
+      textBeach: 'Queensland | Australia',
+      picture: Slide2,
+      href: '#',
+    },
+    {
+      id: 3,
+      nameBeach: 'Cloud Nine',
+      textBeach: 'Siargao | Philippines',
+      picture: Slide3,
+      href: '#',
+    },
+    {
+      id: 4,
+      nameBeach: 'Vieux Boucau',
+      textBeach: 'Hossegor | France',
+      picture: Slide4,
+      href: '#',
+    },
+    {
+      id: 5,
+      nameBeach: 'Malibu Beach',
+      textBeach: 'California | USA',
+      picture: Slide1,
+      href: '#',
+    },
+    {
+      id: 6,
+      nameBeach: ' Airlie Beach',
+      textBeach: 'Queensland | Australia',
+      picture: Slide2,
+      href: '#',
+    },
+    {
+      id: 7,
+      nameBeach: 'Cloud Nine',
+      textBeach: 'Siargao | Philippines',
+      picture: Slide3,
+      href: '#',
+    },
+    {
+      id: 8,
+      nameBeach: 'Vieux Boucau',
+      textBeach: 'Hossegor | France',
+      picture: Slide4,
+      href: '#',
+    },
+  ]);
+
+  const container = {
+    margin: -50,
+  };
+
   return (
     <div className="beachSwiper">
       <div className="beachSwiper__top">
@@ -49,7 +113,6 @@ export default function BeachSwiper() {
           pagination={{
             clickable: true,
           }}
-          loop={true}
           autoplay={{
             delay: 2500,
           }}
@@ -60,7 +123,39 @@ export default function BeachSwiper() {
             swiperRef.current = swiper;
           }}
         >
-          <SwiperSlide>
+          {dataSwiper.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <a
+                  href="#"
+                  target="_blank"
+                  className="beachSwiper__swiper-slide"
+                >
+                  <Image
+                    src={item.picture}
+                    fill
+                    alt=""
+                    sizes="100vw"
+                    className="beachSwiper__swiper-img"
+                  />
+                  <div className="beachSwiper__swiper-content">
+                    <div className="beachSwiper__swiper-name">
+                      {item.nameBeach}
+                    </div>
+                    <div className="beachSwiper__swiper-bottom">
+                      <div className="beachSwiper__swiper-logo">
+                        <Logo leftText="View" rightText="Surf" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="beachSwiper__swiper-place">
+                    {item.textBeach}
+                  </div>
+                </a>
+              </SwiperSlide>
+            );
+          })}
+          {/* <SwiperSlide>
             <a
               href="#"
               target="_blank"
@@ -78,15 +173,13 @@ export default function BeachSwiper() {
                   Malibu Beach
                 </div>
                 <div className="beachSwiper__swiper-bottom">
-                  <div className="beachSwiper__swiper-block">
-                    <div className="beachSwiper__swiper-place">
-                      California | USA
-                    </div>
-                  </div>
                   <div className="beachSwiper__swiper-logo">
                     <Logo leftText="View" rightText="Surf" />
                   </div>
                 </div>
+              </div>
+              <div className="beachSwiper__swiper-place">
+                California | USA
               </div>
             </a>
           </SwiperSlide>
@@ -108,15 +201,13 @@ export default function BeachSwiper() {
                   Airlie Beach
                 </div>
                 <div className="beachSwiper__swiper-bottom">
-                  <div className="beachSwiper__swiper-block">
-                    <div className="beachSwiper__swiper-place">
-                      Queensland | Australia
-                    </div>
-                  </div>
                   <div className="beachSwiper__swiper-logo">
                     <Logo leftText="View" rightText="Surf" />
                   </div>
                 </div>
+              </div>
+              <div className="beachSwiper__swiper-place">
+                Queensland | Australia
               </div>
             </a>
           </SwiperSlide>
@@ -138,15 +229,13 @@ export default function BeachSwiper() {
                   Cloud Nine
                 </div>
                 <div className="beachSwiper__swiper-bottom">
-                  <div className="beachSwiper__swiper-block">
-                    <div className="beachSwiper__swiper-place">
-                      Siargao | Philippines
-                    </div>
-                  </div>
                   <div className="beachSwiper__swiper-logo">
                     <Logo leftText="View" rightText="Surf" />
                   </div>
                 </div>
+              </div>
+              <div className="beachSwiper__swiper-place">
+                Siargao | Philippines
               </div>
             </a>
           </SwiperSlide>
@@ -168,15 +257,13 @@ export default function BeachSwiper() {
                   Vieux Boucau
                 </div>
                 <div className="beachSwiper__swiper-bottom">
-                  <div className="beachSwiper__swiper-block">
-                    <div className="beachSwiper__swiper-place">
-                      Hossegor | France
-                    </div>
-                  </div>
                   <div className="beachSwiper__swiper-logo">
                     <Logo leftText="View" rightText="Surf" />
                   </div>
                 </div>
+              </div>
+              <div className="beachSwiper__swiper-place">
+                Hossegor | France
               </div>
             </a>
           </SwiperSlide>
@@ -198,15 +285,13 @@ export default function BeachSwiper() {
                   Malibu Beach
                 </div>
                 <div className="beachSwiper__swiper-bottom">
-                  <div className="beachSwiper__swiper-block">
-                    <div className="beachSwiper__swiper-place">
-                      California | USA
-                    </div>
-                  </div>
                   <div className="beachSwiper__swiper-logo">
                     <Logo leftText="View" rightText="Surf" />
                   </div>
                 </div>
+              </div>
+              <div className="beachSwiper__swiper-place">
+                California | USA
               </div>
             </a>
           </SwiperSlide>
@@ -228,15 +313,13 @@ export default function BeachSwiper() {
                   Airlie Beach
                 </div>
                 <div className="beachSwiper__swiper-bottom">
-                  <div className="beachSwiper__swiper-block">
-                    <div className="beachSwiper__swiper-place">
-                      Queensland | Australia
-                    </div>
-                  </div>
                   <div className="beachSwiper__swiper-logo">
                     <Logo leftText="View" rightText="Surf" />
                   </div>
                 </div>
+              </div>
+              <div className="beachSwiper__swiper-place">
+                Queensland | Australia
               </div>
             </a>
           </SwiperSlide>
@@ -258,15 +341,13 @@ export default function BeachSwiper() {
                   Cloud Nine
                 </div>
                 <div className="beachSwiper__swiper-bottom">
-                  <div className="beachSwiper__swiper-block">
-                    <div className="beachSwiper__swiper-place">
-                      Siargao | Philippines
-                    </div>
-                  </div>
                   <div className="beachSwiper__swiper-logo">
                     <Logo leftText="View" rightText="Surf" />
                   </div>
                 </div>
+              </div>
+              <div className="beachSwiper__swiper-place">
+                Siargao | Philippines
               </div>
             </a>
           </SwiperSlide>
@@ -288,18 +369,16 @@ export default function BeachSwiper() {
                   Vieux Boucau
                 </div>
                 <div className="beachSwiper__swiper-bottom">
-                  <div className="beachSwiper__swiper-block">
-                    <div className="beachSwiper__swiper-place">
-                      Hossegor | France
-                    </div>
-                  </div>
                   <div className="beachSwiper__swiper-logo">
                     <Logo leftText="View" rightText="Surf" />
                   </div>
                 </div>
               </div>
+              <div className="beachSwiper__swiper-place">
+                Hossegor | France
+              </div>
             </a>
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       </div>
     </div>
