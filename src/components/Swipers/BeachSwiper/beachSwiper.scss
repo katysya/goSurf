@@ -37,7 +37,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        z-index: 1;
+        z-index: 0;
         opacity: 0.8;
         transition: opacity 0.5s;
         background: #1c2121;
@@ -104,24 +104,22 @@
     }
 
     &-block {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
+      position: relative;
+      width: 50px;
+      height: 50px;
     }
 
     &-place {
-      position: absolute;
-      z-index: 10;
       width: max-content;
+      position: absolute;
       color: #fff;
       font-size: 18px;
       font-weight: 250;
       line-height: 22px;
       letter-spacing: 8px;
       text-transform: uppercase;
-      transform: rotate(-90deg);
-      left: -80px;
-      bottom: 180px;
+      left: 0;
+      bottom: 40px;
     }
   }
 }
