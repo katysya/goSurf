@@ -1,11 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import {
-  Autoplay,
-  EffectFade,
-  Navigation,
-  Pagination,
-} from 'swiper/modules';
+import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef } from 'react';
 import { Swiper as SwiperCore } from 'swiper/types';
@@ -14,81 +9,17 @@ import Logo from '@/components/UX/Logo/Logo';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import './beachSwiper.scss';
 
 import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
 import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
-import Slide1 from '../../../assets/images/beachSwiper/img1.jpg';
-import Slide2 from '../../../assets/images/beachSwiper/img2.jpg';
-import Slide3 from '../../../assets/images/beachSwiper/img3.jpg';
-import Slide4 from '../../../assets/images/beachSwiper/img4.jpg';
+
+import { mockSlides } from './lib';
 
 export default function BeachSwiper() {
   const swiperRef = useRef<SwiperCore>();
 
-  const [dataSwiper, setDataSwiper] = useState([
-    {
-      id: 1,
-      nameBeach: 'Malibu Beach',
-      textBeach: 'California | USA',
-      picture: Slide1,
-      href: '#',
-    },
-    {
-      id: 2,
-      nameBeach: ' Airlie Beach',
-      textBeach: 'Queensland | Australia',
-      picture: Slide2,
-      href: '#',
-    },
-    {
-      id: 3,
-      nameBeach: 'Cloud Nine',
-      textBeach: 'Siargao | Philippines',
-      picture: Slide3,
-      href: '#',
-    },
-    {
-      id: 4,
-      nameBeach: 'Vieux Boucau',
-      textBeach: 'Hossegor | France',
-      picture: Slide4,
-      href: '#',
-    },
-    {
-      id: 5,
-      nameBeach: 'Malibu Beach',
-      textBeach: 'California | USA',
-      picture: Slide1,
-      href: '#',
-    },
-    {
-      id: 6,
-      nameBeach: ' Airlie Beach',
-      textBeach: 'Queensland | Australia',
-      picture: Slide2,
-      href: '#',
-    },
-    {
-      id: 7,
-      nameBeach: 'Cloud Nine',
-      textBeach: 'Siargao | Philippines',
-      picture: Slide3,
-      href: '#',
-    },
-    {
-      id: 8,
-      nameBeach: 'Vieux Boucau',
-      textBeach: 'Hossegor | France',
-      picture: Slide4,
-      href: '#',
-    },
-  ]);
-
-  const container = {
-    margin: -50,
-  };
+  const [dataSwiper, setDataSwiper] = useState(mockSlides);
 
   return (
     <div className="beachSwiper">
@@ -110,19 +41,18 @@ export default function BeachSwiper() {
       </div>
       <div className="beachSwiper__swiper">
         <Swiper
-          pagination={{
-            clickable: true,
-          }}
           autoplay={{
             delay: 2500,
           }}
-          // modules={[Autoplay, EffectFade, Navigation, Pagination]}
-          modules={[EffectFade, Navigation, Pagination]}
+          modules={[Autoplay, EffectFade, Navigation]}
+          initialSlide={2}
           slidesPerView={4}
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
         >
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
           {dataSwiper.map((item, index) => {
             return (
               <SwiperSlide key={index}>
@@ -157,6 +87,8 @@ export default function BeachSwiper() {
               </SwiperSlide>
             );
           })}
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
         </Swiper>
       </div>
     </div>

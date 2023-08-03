@@ -71,11 +71,9 @@
     .swiper-slide {
       height: 700px;
       width: 200px;
-      background-color: aqua;
       margin-right: -40px;
 
       &:nth-child(odd) {
-        background-color: red;
         margin-top: 42px;
       }
     }

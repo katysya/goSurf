@@ -1,6 +1,11 @@
 'use client';
 import { useRef } from 'react';
-import { Navigation, Pagination } from 'swiper/modules';
+import {
+  Autoplay,
+  EffectFade,
+  Navigation,
+  Pagination,
+} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import Image from 'next/image';
@@ -38,8 +43,10 @@ export default function MainSwiper() {
       </div>
       <div className="mainSwiper__swiper">
         <Swiper
-          modules={[Navigation, Pagination]}
-          pagination={true}
+          modules={[Autoplay, EffectFade, Navigation, Pagination]}
+          pagination={{
+            clickable: true,
+          }}
           spaceBetween={50}
           slidesPerView={1}
           loop
@@ -47,18 +54,6 @@ export default function MainSwiper() {
             swiperRef.current = swiper;
           }}
         >
-          <SwiperSlide>
-            <Image src={slide1} width={1000} height={500} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={slide2} width={1000} height={500} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={slide3} width={1000} height={500} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={slide4} width={1000} height={500} alt="" />
-          </SwiperSlide>
           <SwiperSlide>
             <Image src={slide1} width={1000} height={500} alt="" />
           </SwiperSlide>
