@@ -1,0 +1,14 @@
+.map {
+  margin-top: 157px;
+
+  &__subtitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &__image {
+    position: relative;
+    height: 879px;
+  }
+}

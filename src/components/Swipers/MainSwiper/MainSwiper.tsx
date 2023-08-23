@@ -17,13 +17,44 @@ import './mainSwiper.scss';
 
 import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
 import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
-import slide1 from '../../../assets/images/mainSwiper/img1.webp';
+import slide1 from '../../../../public/MainSwiper/Slide1.jpg';
 import slide2 from '../../../assets/images/mainSwiper/img2.webp';
 import slide3 from '../../../assets/images/mainSwiper/img3.webp';
 import slide4 from '../../../assets/images/mainSwiper/img4.webp';
 
 export default function MainSwiper() {
   const swiperRef = useRef<SwiperCore>();
+
+  const beach = [
+    {
+      id: 1,
+      number: '01',
+      name: 'North Shore',
+      picture: 'slide1',
+      condition: 'radical',
+    },
+    {
+      id: 2,
+      number: '02',
+      name: 'South Shore',
+      picture: 'slide1',
+      condition: 'radical',
+    },
+    {
+      id: 3,
+      number: '03',
+      name: 'West Shore',
+      picture: 'slide1',
+      condition: 'radical',
+    },
+    {
+      id: 4,
+      number: '04',
+      name: 'East Shore',
+      picture: 'slide1',
+      condition: 'radical',
+    },
+  ];
 
   return (
     <section className="mainSwiper">
@@ -47,26 +78,47 @@ export default function MainSwiper() {
           pagination={{
             clickable: true,
           }}
-          spaceBetween={50}
+          spaceBetween={10}
           slidesPerView={1}
           loop
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
         >
-          <SwiperSlide>
-            <Image src={slide1} width={1000} height={500} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={slide2} width={1000} height={500} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={slide3} width={1000} height={500} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={slide4} width={1000} height={500} alt="" />
-          </SwiperSlide>
+          {beach.map((item, index) => {
+            return (
+              <SwiperSlide key={item.id}>
+                <Image src={slide1} fill={true} alt="" />
+                <div className="mainSwiper__info">
+                  <div className="mainSwiper__info-top">
+                    <div className="mainSwiper__desc">Surf</div>
+                    <div className="mainSwiper__name">
+                      {item.name}
+                    </div>
+                  </div>
+                  <div className="mainSwiper__info-bottom">
+                    <div className="mainSwiper__desc">Condition</div>
+                    <div className="mainSwiper__condition">
+                      {item.condition}
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
+        <div className="mainSwiper__bottom">
+          {beach.map((item, index) => {
+            return (
+              <div key={index} className="mainSwiper__item">
+                <div className="mainSwiper__number">
+                  {item.number}
+                </div>
+                <div className="mainSwiper__beach"> {item.name} </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
