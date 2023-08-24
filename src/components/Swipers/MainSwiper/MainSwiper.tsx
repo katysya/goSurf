@@ -18,9 +18,6 @@ import './mainSwiper.scss';
 import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
 import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
 import slide1 from '../../../../public/MainSwiper/Slide1.jpg';
-import slide2 from '../../../assets/images/mainSwiper/img2.webp';
-import slide3 from '../../../assets/images/mainSwiper/img3.webp';
-import slide4 from '../../../assets/images/mainSwiper/img4.webp';
 
 export default function MainSwiper() {
   const swiperRef = useRef<SwiperCore>();

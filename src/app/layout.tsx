@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={firaSans.className}>
-        <Sidebar />
+        {/* <Sidebar /> */}
         {children}
       </body>
     </html>
