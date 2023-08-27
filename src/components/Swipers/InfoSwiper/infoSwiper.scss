@@ -1,65 +1,100 @@
 .infoSwiper {
-  height: 500px;
+  &__navigation {
+    position: absolute;
+    top: 250px;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+  }
 
   &__slide {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 77px;
 
     &-img {
+      object-fit: cover;
+      width: 100%;
+      max-width: 1115px;
+    }
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      &-icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &-title {
+        color: #fff;
+        font-size: 22px;
+        width: fit-content;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 7.333px;
+        text-transform: uppercase;
+        opacity: 0.5;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+          width: 80px;
+          height: 1px;
+          background-color: #fff;
+          opacity: 0.5;
+          top: 40%;
+          left: 110%;
+        }
+      }
+
+      &-name {
+        color: #fff;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 86px;
+        text-transform: uppercase;
+      }
+
+      &--right {
+        margin-top: 112px;
+        align-items: flex-end;
+
+        .infoSwiper__slide-block-title {
+          &::after {
+            left: -100%;
+          }
+        }
+      }
+    }
+
+    &-data {
       position: relative;
-      width: 1115px;
       height: 780px;
 
-      img {
-        object-fit: cover;
-        width: 100%;
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
       }
     }
   }
 
-  &__desc {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  &__airline {
-    color: #fff;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 32px;
-    letter-spacing: 7.333px;
-    text-transform: uppercase;
-    opacity: 0.5;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: '';
-      width: 80px;
-      height: 1px;
-      background-color: #fff;
-      opacity: 0.5;
-      top: 40%;
-    }
-
-    &-name {
-      color: #fff;
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 800;
-      line-height: 86px;
-      text-transform: uppercase;
-    }
-  }
-
   &__info {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 45px;
-    justify-content: center;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 45px;
+      justify-content: center;
+    }
   }
 
   &__block {
@@ -91,5 +126,11 @@
     font-weight: 800;
     line-height: 36px;
     text-transform: uppercase;
+  }
+
+  &__airline {
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
 }

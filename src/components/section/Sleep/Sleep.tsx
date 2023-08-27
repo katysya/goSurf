@@ -1,46 +1,45 @@
 import Image from 'next/image';
-
+import Title from '@/components/UX/Title/Title';
 import InfoSwiper from '@/components/Swipers/InfoSwiper/InfoSwiper';
 import LinkInfo from '@/components/UX/LinkInfo/LinkInfo';
-import Title from '@/components/UX/Title/Title';
 
-/* Pucture */
-import glass from '../../../../public/Travel/glass.png';
-import slide1 from '../../../../public/Travel/slide1.png';
-import airline from '../../../../public/Travel/airline.png';
-import iconImg from '../../../../public/Travel/star.svg';
+/* Picture */
+import flower from '../../../../public/Sleep/flower.png';
+import slide1 from '../../../../public/Sleep/slide1.png';
+import hammock from '../../../../public/Sleep/sleep.png';
+import iconImg from '../../../../public/Sleep/star.svg';
 
-import './travel.scss';
+import './sleep.scss';
 
-export default function Travel() {
+export default function Sleep() {
   const data = [
     {
       id: 1,
-      titleTop: 'Shore',
-      nameTop: 'Airlie Beach | Australia',
-      titleBottom: 'Airline',
-      nameBottom: 'Virgin Australia',
+      titleTop: 'Resorts',
+      nameTop: 'Auberge | Australia',
+      titleBottom: 'Rating',
+      nameBottom: 'Excellent',
       icon: iconImg,
       slide: slide1,
-      img: airline,
-      imgWidth: 900,
+      img: hammock,
+      imgWidth: 600,
       imgHeight: 400,
       data: [
         {
-          nameValue: 'destination',
-          value: 'Queensland Australia',
+          nameValue: 'Resort',
+          value: 'Auberge Australia',
         },
         {
-          nameValue: 'distance',
-          value: '7,065 Miles',
+          nameValue: '# of Nights',
+          value: '5 Nights',
         },
         {
-          nameValue: 'time',
-          value: '23 Hours 5\u00A0Minutes',
+          nameValue: '# of Guests',
+          value: '4 Guests',
         },
         {
-          nameValue: 'price',
-          value: '$1,976 USD',
+          nameValue: 'Pricing',
+          value: '$349 USD',
         },
       ],
     },
@@ -53,8 +52,8 @@ export default function Travel() {
       nameBottom: 'Virgin Australia',
       icon: iconImg,
       slide: slide1,
-      img: airline,
-      imgWidth: 900,
+      img: hammock,
+      imgWidth: 600,
       imgHeight: 400,
       data: [
         {
@@ -78,18 +77,18 @@ export default function Travel() {
   ];
 
   return (
-    <section className="travel">
+    <section className="sleep">
       <div className="container">
-        <Title title="Travel" />
+        <Title title="Sleep" />
       </div>
       <InfoSwiper info={data} />
-      <div className="travel__bottom">
-        <LinkInfo leftText="Book" rightText="Flight" />
+      <div className="sleep__bottom">
+        <LinkInfo leftText="Book" rightText="Stay" />
         <Image
-          className="travel__img"
-          src={glass}
-          width={320}
-          height={564}
+          className="sleep__img"
+          src={flower}
+          width={280}
+          height={400}
           alt=""
         />
       </div>

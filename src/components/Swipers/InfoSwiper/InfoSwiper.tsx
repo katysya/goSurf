@@ -9,78 +9,42 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import './infoSwiper.scss';
 
+/* Picture */
 import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
 import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
-import slide1 from '../../../../public/Travel/slide1.png';
 
-export default function InfoSwiper() {
+/* Interface */
+//Данные для нижнего блока
+interface IData {
+  nameValue: string;
+  value: string;
+}
+
+//Данные для слайда
+interface ISlide {
+  id: number;
+  titleTop: string;
+  nameTop: string;
+  titleBottom: string;
+  nameBottom: string;
+  icon: string;
+  slide: string;
+  img: string;
+  imgWidth: number;
+  imgHeight: number;
+  data: IData[];
+}
+
+//Interface для свойства (Props)
+interface IInfo {
+  info: ISlide[];
+}
+
+export default function InfoSwiper(props: IInfo) {
   const swiperRef = useRef<SwiperCore>();
-
-  const info = [
-    {
-      id: 1,
-      shore: 'Airlie Beach | Australia',
-      arline: 'Virgin Australia',
-      data: [
-        {
-          nameValue: 'destination',
-          value: 'Queensland Australia',
-        },
-        {
-          nameValue: 'distance',
-          value: '7,065 Miles',
-        },
-        {
-          nameValue: 'time',
-          value: '23 Hours 5\u00A0Minutes',
-        },
-        {
-          nameValue: 'price',
-          value: '$1,976 USD',
-        },
-      ],
-    },
-    {
-      id: 2,
-      shore: 'Airlie Beach | Australia',
-      arline: 'Virgin Australia',
-      data: [
-        {
-          nameValue: 'destination',
-          value: 'Queensland Australia',
-        },
-        {
-          nameValue: 'distance',
-          value: '7,065 Miles',
-        },
-        {
-          nameValue: 'time',
-          value: '23 Hours 5\u00A0Minutes',
-        },
-        {
-          nameValue: 'price',
-          value: '$1,976 USD',
-        },
-      ],
-    },
-  ];
 
   return (
     <section className="infoSwiper">
-      <div className="infoSwiper__navigation">
-        <button
-          className="infoSwiper__navigation-btn"
-          onClick={() => swiperRef.current?.slidePrev()}
-        >
-          <Image src={arrowLeft} width={25} height={20} alt="" />
-        </button>
-        <button
-          className="infoSwiper__navigation-btn"
-          onClick={() => swiperRef.current?.slideNext()}
-        >
-          <Image src={arrowRight} width={25} height={20} alt="" />
-        </button>
-      </div>
       <div className="infoSwiper__swiper">
         <Swiper
           modules={[EffectFade, Navigation]}
@@ -91,35 +55,97 @@ export default function InfoSwiper() {
             swiperRef.current = swiper;
           }}
         >
-          {info.map((item) => {
+          <div className="infoSwiper__navigation">
+            <div className="container">
+              <div className="swiper__navigation">
+                <button
+                  className="swiper__navigation-btn"
+                  onClick={() => swiperRef.current?.slidePrev()}
+                >
+                  <Image
+                    src={arrowLeft}
+                    width={25}
+                    height={20}
+                    alt=""
+                  />
+                </button>
+                <button
+                  className="swiper__navigation-btn"
+                  onClick={() => swiperRef.current?.slideNext()}
+                >
+                  <Image
+                    src={arrowRight}
+                    width={25}
+                    height={20}
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          {props.info.map((item) => {
             return (
               <SwiperSlide key={item.id}>
                 <div className="infoSwiper__slide">
-                  <div className="infoSwiper__slide-img">
-                    <Image src={slide1} fill={true} alt="" />
-                  </div>
-                  <div className="infoSwiper__desc">
-                    <p className="infoSwiper__airline">Airline</p>
-                    <p className="infoSwiper__airline-name">
-                      {item.arline}
-                    </p>
+                  <div className="infoSwiper__slide-data">
+                    <Image
+                      src={item.slide}
+                      className="infoSwiper__slide-img"
+                      fill={true}
+                      alt=""
+                    />
+                    <div className="container">
+                      <div className="infoSwiper__slide-block infoSwiper__slide-block--right">
+                        <p className="infoSwiper__slide-block-title">
+                          {item.titleTop}
+                        </p>
+                        <p className="infoSwiper__slide-block-name">
+                          {item.nameTop}
+                        </p>
+                      </div>
+                      <div className="infoSwiper__slide-block">
+                        <p className="infoSwiper__slide-block-title">
+                          {item.titleBottom}
+                        </p>
+                        <div className="infoSwiper__slide-block-icon">
+                          <p className="infoSwiper__slide-block-name">
+                            {item.nameBottom}
+                          </p>
+                          <Image
+                            src={item.icon}
+                            width={154}
+                            height={22}
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <Image
+                      src={item.img}
+                      className="infoSwiper__airline"
+                      width={item.imgWidth}
+                      height={item.imgHeight}
+                      alt=""
+                    />
                   </div>
                   <div className="infoSwiper__info">
-                    {item.data.map((elem, index) => {
-                      return (
-                        <div
-                          key={index}
-                          className="infoSwiper__block"
-                        >
-                          <p className="infoSwiper__nameValue">
-                            {elem.nameValue}
-                          </p>
-                          <p className="infoSwiper__value">
-                            {elem.value}
-                          </p>
-                        </div>
-                      );
-                    })}
+                    <div className="container">
+                      {item.data.map((elem, index) => {
+                        return (
+                          <div
+                            key={index}
+                            className="infoSwiper__block"
+                          >
+                            <p className="infoSwiper__nameValue">
+                              {elem.nameValue}
+                            </p>
+                            <p className="infoSwiper__value">
+                              {elem.value}
+                            </p>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>

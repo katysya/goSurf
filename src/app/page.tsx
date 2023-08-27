@@ -2,6 +2,8 @@ import Banner from '@/components/Banner/Banner';
 import BeachSwiper from '@/components/Swipers/BeachSwiper/BeachSwiper';
 import Map from '@/components/section/Map/Map';
 import Travel from '@/components/section/Travel/Travel';
+import Sleep from '@/components/section/Sleep/Sleep';
+
 import '../assets/styles/main.scss';
 
 export default function Home() {
@@ -11,6 +13,7 @@ export default function Home() {
       <Map />
       <BeachSwiper />
       <Travel />
+      <Sleep />
     </div>
   );
 }
