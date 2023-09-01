@@ -23,8 +23,6 @@
       background-color: #fff;
       opacity: 0.5;
       width: 80px;
-      top: 50%;
-      left: -105px;
     }
   }
 
@@ -38,6 +36,28 @@
 
     span {
       font-weight: 250;
+    }
+  }
+
+  &--right {
+    align-items: flex-end;
+
+    .subtitle__name {
+      &::before {
+        top: 50%;
+        left: -105px;
+      }
+    }
+  }
+
+  &--left {
+    align-items: flex-start;
+
+    .subtitle__name {
+      &::before {
+        top: 50%;
+        left: 105%;
+      }
     }
   }
 }

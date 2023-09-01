@@ -11,7 +11,11 @@ export default function Map() {
       <Title title="Surf" />
       <div className="container">
         <div className="map__subtitle">
-          <Subtitle />
+          <Subtitle
+            name="Current location"
+            desc="California | USA"
+            position={2}
+          />
         </div>
         <div className="map__image">
           <Image
