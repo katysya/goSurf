@@ -182,8 +182,8 @@ export default function ProductSwiper() {
       <Image
         className="productSwiper__bg"
         src={background}
-        width={1054}
-        height={590}
+        width={1454}
+        height={790}
         alt=""
       />
     </div>
