@@ -12,26 +12,28 @@ import './infoSwiper.scss';
 /* Picture */
 import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
 import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
+import Subtitle from '@/components/UX/Subtitle/Subtitle';
 
 /* Interface */
 //Данные для нижнего блока
 interface IData {
-  nameValue: string;
-  value: string;
+  nameValue: String;
+  value: String;
 }
 
 //Данные для слайда
 interface ISlide {
-  id: number;
-  titleTop: string;
-  nameTop: string;
-  titleBottom: string;
-  nameBottom: string;
-  icon: string;
-  slide: string;
-  img: string;
-  imgWidth: number;
-  imgHeight: number;
+  id: Number;
+  titleTop: String;
+  nameTop: String;
+  country: String;
+  titleBottom: String;
+  nameBottom: String;
+  icon: String;
+  slide: String;
+  img: String;
+  imgWidth: Number;
+  imgHeight: Number;
   data: IData[];
 }
 
@@ -96,12 +98,12 @@ export default function InfoSwiper(props: IInfo) {
                     />
                     <div className="container">
                       <div className="infoSwiper__slide-block infoSwiper__slide-block--right">
-                        <p className="infoSwiper__slide-block-title">
-                          {item.titleTop}
-                        </p>
-                        <p className="infoSwiper__slide-block-name">
-                          {item.nameTop}
-                        </p>
+                        <Subtitle
+                          name={item.titleTop}
+                          desc={item.nameTop}
+                          country={item.country}
+                          position={2}
+                        />
                       </div>
                       <div className="infoSwiper__slide-block">
                         <p className="infoSwiper__slide-block-title">

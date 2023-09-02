@@ -16,7 +16,8 @@ export default function Sleep() {
     {
       id: 1,
       titleTop: 'Resorts',
-      nameTop: 'Auberge | Australia',
+      nameTop: 'Auberge',
+      country: 'Australia',
       titleBottom: 'Rating',
       nameBottom: 'Excellent',
       icon: iconImg,

@@ -17,7 +17,8 @@ export default function Travel() {
     {
       id: 1,
       titleTop: 'Shore',
-      nameTop: 'Airlie Beach | Australia',
+      nameTop: 'Airlie Beach',
+      country: 'Australia',
       titleBottom: 'Airline',
       nameBottom: 'Virgin Australia',
       icon: iconImg,

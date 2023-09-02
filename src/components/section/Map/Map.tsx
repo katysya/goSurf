@@ -13,7 +13,8 @@ export default function Map() {
         <div className="map__subtitle">
           <Subtitle
             name="Current location"
-            desc="California | USA"
+            desc="California"
+            country="USA"
             position={2}
           />
         </div>
