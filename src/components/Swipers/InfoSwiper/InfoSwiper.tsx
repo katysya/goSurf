@@ -29,6 +29,7 @@ interface ISlide {
   country: String;
   titleBottom: String;
   nameBottom: String;
+  countryBottom: String;
   icon: String;
   slide: String;
   img: String;
@@ -106,20 +107,19 @@ export default function InfoSwiper(props: IInfo) {
                         />
                       </div>
                       <div className="infoSwiper__slide-block">
-                        <p className="infoSwiper__slide-block-title">
-                          {item.titleBottom}
-                        </p>
-                        <div className="infoSwiper__slide-block-icon">
-                          <p className="infoSwiper__slide-block-name">
-                            {item.nameBottom}
-                          </p>
-                          <Image
-                            src={item.icon}
-                            width={154}
-                            height={22}
-                            alt=""
-                          />
-                        </div>
+                        <Subtitle
+                          name={item.titleBottom}
+                          desc={item.nameBottom}
+                          country={item.countryBottom}
+                          position={1}
+                        />
+                        <Image
+                          className="infoSwiper__slide-block-icon"
+                          src={item.icon}
+                          width={154}
+                          height={22}
+                          alt=""
+                        />
                       </div>
                     </div>
                     <Image

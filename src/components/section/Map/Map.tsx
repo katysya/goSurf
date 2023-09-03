@@ -7,7 +7,7 @@ import map from '../../../../public/Map/map.png';
 
 export default function Map() {
   return (
-    <section className="map">
+    <section className="map" id="map">
       <Title title="Surf" />
       <div className="container">
         <div className="map__subtitle">

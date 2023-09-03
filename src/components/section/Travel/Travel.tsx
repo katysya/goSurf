@@ -7,6 +7,8 @@ import Title from '@/components/UX/Title/Title';
 /* Pucture */
 import glass from '../../../../public/Travel/glass.png';
 import slide1 from '../../../../public/Travel/slide1.png';
+import slide2 from '../../../../public/Travel/slide2.png';
+import slide3 from '../../../../public/Travel/slide3.png';
 import airline from '../../../../public/Travel/airline.png';
 import iconImg from '../../../../public/Travel/star.svg';
 
@@ -20,7 +22,8 @@ export default function Travel() {
       nameTop: 'Airlie Beach',
       country: 'Australia',
       titleBottom: 'Airline',
-      nameBottom: 'Virgin Australia',
+      nameBottom: 'Virgin',
+      countryBottom: 'Australia',
       icon: iconImg,
       slide: slide1,
       img: airline,
@@ -33,15 +36,15 @@ export default function Travel() {
         },
         {
           nameValue: 'distance',
-          value: '7,065 Miles',
+          value: '7,000Miles',
         },
         {
           nameValue: 'time',
-          value: '23 Hours 5\u00A0Minutes',
+          value: '3 Hours 5\u00A0Minutes',
         },
         {
           nameValue: 'price',
-          value: '$1,976 USD',
+          value: '$1,111 USD',
         },
       ],
     },
@@ -50,10 +53,11 @@ export default function Travel() {
       id: 2,
       titleTop: 'Shore',
       nameTop: 'Airlie Beach | Australia',
+      country: 'Australia',
       titleBottom: 'Airline',
       nameBottom: 'Virgin Australia',
       icon: iconImg,
-      slide: slide1,
+      slide: slide2,
       img: airline,
       imgWidth: 900,
       imgHeight: 400,
@@ -64,28 +68,60 @@ export default function Travel() {
         },
         {
           nameValue: 'distance',
-          value: '7,065 Miles',
+          value: '3,065 Miles',
         },
         {
           nameValue: 'time',
-          value: '23 Hours 5\u00A0Minutes',
+          value: '4 Hours 5\u00A0Minutes',
         },
         {
           nameValue: 'price',
-          value: '$1,976 USD',
+          value: '$4,976 USD',
+        },
+      ],
+    },
+
+    {
+      id: 3,
+      titleTop: 'Shore',
+      nameTop: 'Airlie Beach | Australia',
+      country: 'Australia',
+      titleBottom: 'Airline',
+      nameBottom: 'Virgin Australia',
+      icon: iconImg,
+      slide: slide3,
+      img: airline,
+      imgWidth: 900,
+      imgHeight: 400,
+      data: [
+        {
+          nameValue: 'destination',
+          value: 'Queensland Australia',
+        },
+        {
+          nameValue: 'distance',
+          value: '5,055 Miles',
+        },
+        {
+          nameValue: 'time',
+          value: '2 Hours 5\u00A0Minutes',
+        },
+        {
+          nameValue: 'price',
+          value: '$1,006 USD',
         },
       ],
     },
   ];
 
   return (
-    <section className="travel">
+    <section className="travel" id="travel">
       <div className="container">
         <Title title="Travel" />
       </div>
       <InfoSwiper info={data} />
       <div className="travel__bottom">
-        <LinkInfo leftText="Book" rightText="Flight" />
+        <LinkInfo link="#" leftText="Book" rightText="Flight" />
         <Image
           className="travel__img"
           src={glass}

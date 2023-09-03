@@ -6,6 +6,8 @@ import LinkInfo from '@/components/UX/LinkInfo/LinkInfo';
 /* Picture */
 import flower from '../../../../public/Sleep/flower.png';
 import slide1 from '../../../../public/Sleep/slide1.png';
+import slide2 from '../../../../public/Sleep/slide2.png';
+import slide3 from '../../../../public/Sleep/slide3.png';
 import hammock from '../../../../public/Sleep/sleep.png';
 import iconImg from '../../../../public/Sleep/star.svg';
 
@@ -20,6 +22,7 @@ export default function Sleep() {
       country: 'Australia',
       titleBottom: 'Rating',
       nameBottom: 'Excellent',
+      countryBottom: 'Australia',
       icon: iconImg,
       slide: slide1,
       img: hammock,
@@ -44,41 +47,74 @@ export default function Sleep() {
         },
       ],
     },
-
     {
       id: 2,
-      titleTop: 'Shore',
-      nameTop: 'Airlie Beach | Australia',
-      titleBottom: 'Airline',
-      nameBottom: 'Virgin Australia',
+      titleTop: 'Resorts',
+      nameTop: 'Auberge',
+      country: 'Australia',
+      titleBottom: 'Rating',
+      nameBottom: 'Excellent',
+      countryBottom: 'Australia',
       icon: iconImg,
-      slide: slide1,
+      slide: slide2,
       img: hammock,
       imgWidth: 600,
       imgHeight: 400,
       data: [
         {
-          nameValue: 'destination',
-          value: 'Queensland Australia',
+          nameValue: 'Resort',
+          value: 'Auberge Australia',
         },
         {
-          nameValue: 'distance',
-          value: '7,065 Miles',
+          nameValue: '# of Nights',
+          value: '1 Nights',
         },
         {
-          nameValue: 'time',
-          value: '23 Hours 5\u00A0Minutes',
+          nameValue: '# of Guests',
+          value: '2 Guests',
         },
         {
-          nameValue: 'price',
-          value: '$1,976 USD',
+          nameValue: 'Pricing',
+          value: '$590 USD',
+        },
+      ],
+    },
+    {
+      id: 3,
+      titleTop: 'Resorts',
+      nameTop: 'Auberge',
+      country: 'Australia',
+      titleBottom: 'Rating',
+      nameBottom: 'Excellent',
+      countryBottom: 'Australia',
+      icon: iconImg,
+      slide: slide3,
+      img: hammock,
+      imgWidth: 600,
+      imgHeight: 400,
+      data: [
+        {
+          nameValue: 'Resort',
+          value: 'Auberge Australia',
+        },
+        {
+          nameValue: '# of Nights',
+          value: '2 Nights',
+        },
+        {
+          nameValue: '# of Guests',
+          value: '2 Guests',
+        },
+        {
+          nameValue: 'Pricing',
+          value: '$150 USD',
         },
       ],
     },
   ];
 
   return (
-    <section className="sleep">
+    <section className="sleep" id="sleep">
       <div className="container">
         <Title title="Sleep" />
       </div>

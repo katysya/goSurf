@@ -1,6 +1,14 @@
 @import './reset.scss';
 @import './colors.scss';
 
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: $black;
 
