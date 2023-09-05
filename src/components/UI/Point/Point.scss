@@ -1,0 +1,126 @@
+@import '../../../assets/styles/main.scss';
+
+.point {
+  position: absolute;
+  z-index: 10;
+
+  &__circle {
+    background-color: $mint;
+    box-shadow: (0px 0px 35px rgba(74, 246, 205, 0.84));
+    width: 24px;
+    height: 24px;
+    transform: rotate(-45deg);
+    z-index: 10;
+    border-radius: 50%;
+    transition: border-radius 0.2s;
+  }
+
+  &__info {
+    position: relative;
+  }
+
+  &__beach {
+    position: absolute;
+    width: 283px;
+    left: -130px;
+    bottom: 15px;
+    background: rgba(15, 16, 16, 0.7);
+    opacity: 0.7;
+    padding: 31px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 5;
+    opacity: 0;
+    border-radius: 6px;
+    transition: opacity 0.3s;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__arrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 5px;
+
+    &:after {
+      content: '';
+      width: 80px;
+      height: 1px;
+      background: $mint;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__place {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+  }
+
+  &__data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      align-items: center;
+
+      &-name {
+        color: #fff;
+        width: max-content;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 23px;
+      }
+
+      &-desc {
+        color: #fff;
+        text-align: center;
+        width: max-content;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 12px;
+        width: fit-content;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .point__circle {
+      border-radius: 50% 0% 50% 50%;
+    }
+
+    .point__beach {
+      opacity: 1;
+    }
+  }
+}
