@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef } from 'react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import Image from 'next/image';
-import Logo from '@/components/UX/Logo/Logo';
+import Logo from '@/components/UI/Logo/Logo';
 
 import 'swiper/css';
 import 'swiper/css/navigation';

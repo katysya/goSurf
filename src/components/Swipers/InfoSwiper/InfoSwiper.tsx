@@ -12,7 +12,7 @@ import './infoSwiper.scss';
 /* Picture */
 import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
 import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
-import Subtitle from '@/components/UX/Subtitle/Subtitle';
+import Subtitle from '@/components/UI/Subtitle/Subtitle';
 
 /* Interface */
 //Данные для нижнего блока

@@ -1,4 +1,4 @@
-import Banner from '@/components/Banner/Banner';
+import Banner from '@/components/section/Banner/Banner';
 import BeachSwiper from '@/components/Swipers/BeachSwiper/BeachSwiper';
 import Map from '@/components/section/Map/Map';
 import Travel from '@/components/section/Travel/Travel';

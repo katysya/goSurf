@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Title from '@/components/UX/Title/Title';
+import Title from '@/components/UI/Title/Title';
 import InfoSwiper from '@/components/Swipers/InfoSwiper/InfoSwiper';
-import LinkInfo from '@/components/UX/LinkInfo/LinkInfo';
+import InfoLink from '@/components/UI/InfoLink/InfoLink';
 
 /* Picture */
 import flower from '../../../../public/Sleep/flower.png';
@@ -120,7 +120,7 @@ export default function Sleep() {
       </div>
       <InfoSwiper info={data} />
       <div className="sleep__bottom">
-        <LinkInfo leftText="Book" rightText="Stay" />
+        <InfoLink leftText="Book" rightText="Stay" />
         <Image
           className="sleep__img"
           src={flower}

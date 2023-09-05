@@ -1,5 +1,5 @@
 import ProductSwiper from '@/components/Swipers/ProductSwiper/ProductSwiper';
-import Title from '../../UX/Title/Title';
+import Title from '../../UI/Title/Title';
 
 export default function Shop() {
   return (

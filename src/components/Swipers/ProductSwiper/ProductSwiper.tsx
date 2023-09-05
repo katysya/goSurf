@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { EffectFade, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
-import Subtitle from '@/components/UX/Subtitle/Subtitle';
+import Subtitle from '@/components/UI/Subtitle/Subtitle';
 import Image from 'next/image';
 
 import 'swiper/css';
@@ -14,7 +14,7 @@ import './productSwiper.scss';
 import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
 import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
 import icon from '../../../../public/Shop/Star.svg';
-import LinkInfo from '@/components/UX/LinkInfo/LinkInfo';
+import InfoLink from '@/components/UI/InfoLink/InfoLink';
 import background from '../../../../public/Shop/bg.png';
 import surfBoard from '../../../../public/Shop/Surfboard.png';
 import surfBoard1 from '../../../../public/Shop/Surfboard1.png';
@@ -188,7 +188,7 @@ export default function ProductSwiper() {
                         </div>
                       </div>
                       <div>
-                        <LinkInfo
+                        <InfoLink
                           link=""
                           leftText="Drop"
                           rightText="In"

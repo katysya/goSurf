@@ -1,11 +1,11 @@
-import LinkInfo from '@/components/UX/LinkInfo/LinkInfo';
+import InfoLink from '@/components/UI/InfoLink/InfoLink';
 
 import './footer.scss';
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <LinkInfo link="#" leftText="Go" rightText="Surf" />
+      <InfoLink link="#" leftText="Go" rightText="Surf" />
       <p className="footer__copy">
         © Go-Surf 2018. All Rights Reserved.
       </p>

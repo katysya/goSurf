@@ -9,7 +9,9 @@
 
   &__image {
     position: relative;
-    height: 879px;
+    width: calc(100vw - 181px);
+    height: calc((100vw - 181px) / 2);
+    margin: 0 auto;
   }
 
   .points {

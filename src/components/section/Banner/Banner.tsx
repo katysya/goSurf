@@ -1,5 +1,5 @@
-import MainSwiper from '../Swipers/MainSwiper/MainSwiper';
-import Sidebar from '../layout/Sidebar/Sidebar';
+import MainSwiper from '../../Swipers/MainSwiper/MainSwiper';
+import Sidebar from '../../layout/Sidebar/Sidebar';
 
 import './banner.scss';
 

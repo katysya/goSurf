@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
 import InfoSwiper from '@/components/Swipers/InfoSwiper/InfoSwiper';
-import LinkInfo from '@/components/UX/LinkInfo/LinkInfo';
-import Title from '@/components/UX/Title/Title';
+import InfoLink from '@/components/UI/InfoLink/InfoLink';
+import Title from '@/components/UI/Title/Title';
 
 /* Pucture */
 import glass from '../../../../public/Travel/glass.png';
@@ -121,7 +121,7 @@ export default function Travel() {
       </div>
       <InfoSwiper info={data} />
       <div className="travel__bottom">
-        <LinkInfo link="#" leftText="Book" rightText="Flight" />
+        <InfoLink link="#" leftText="Book" rightText="Flight" />
         <Image
           className="travel__img"
           src={glass}
