@@ -22,6 +22,7 @@ import surfBoard2 from '../../../../public/Shop/Surfboard2.png';
 import surfBoard3 from '../../../../public/Shop/Surfboard3.png';
 import product1 from '../../../../public/Shop/product1.png';
 import product2 from '../../../../public/Shop/product2.png';
+import ProductPoint from '@/components/UI/ProductPoint/ProductPoint';
 
 export default function ProductSwiper() {
   const swiperRef = useRef<SwiperCore>();
@@ -36,6 +37,32 @@ export default function ProductSwiper() {
       img: surfBoard,
       link: '#',
       nameDetails: 'Extras',
+      description: [
+        {
+          id: 1,
+          pos: {
+            left: '60%',
+            top: '10%',
+          },
+          desc: 'Nice mint color',
+        },
+        {
+          id: 2,
+          pos: {
+            left: '50%',
+            top: '40%',
+          },
+          desc: 'Double Concave with Vee Shape low point',
+        },
+        {
+          id: 3,
+          pos: {
+            left: '13%',
+            top: '60%',
+          },
+          desc: 'High level strength',
+        },
+      ],
       details: [
         {
           id: 1,
@@ -60,6 +87,32 @@ export default function ProductSwiper() {
       img: surfBoard1,
       link: '#',
       nameDetails: 'Extras',
+      description: [
+        {
+          id: 1,
+          pos: {
+            left: '30%',
+            top: '8%',
+          },
+          desc: 'Elegant color without frills',
+        },
+        {
+          id: 2,
+          pos: {
+            left: '70%',
+            top: '40%',
+          },
+          desc: 'Triple Concave with Vee Shape low point',
+        },
+        {
+          id: 3,
+          pos: {
+            left: '60%',
+            top: '70%',
+          },
+          desc: 'Durable coating',
+        },
+      ],
       details: [
         {
           id: 1,
@@ -84,6 +137,40 @@ export default function ProductSwiper() {
       img: surfBoard2,
       link: '#',
       nameDetails: 'Extras',
+      description: [
+        {
+          id: 1,
+          pos: {
+            left: '30%',
+            top: '7%',
+          },
+          desc: 'Bright color for bright emotions',
+        },
+        {
+          id: 2,
+          pos: {
+            left: '70%',
+            top: '40%',
+          },
+          desc: 'Warranty more than 1 year',
+        },
+        {
+          id: 3,
+          pos: {
+            left: '20%',
+            top: '50%',
+          },
+          desc: 'Durable coating',
+        },
+        {
+          id: 4,
+          pos: {
+            left: '30%',
+            top: '90%',
+          },
+          desc: 'Top quality',
+        },
+      ],
       details: [
         {
           id: 1,
@@ -108,6 +195,24 @@ export default function ProductSwiper() {
       img: surfBoard3,
       link: '#',
       nameDetails: 'Extras',
+      description: [
+        {
+          id: 1,
+          pos: {
+            left: '50%',
+            top: '50%',
+          },
+          desc: 'Double Concave with Vee Shape low point',
+        },
+        {
+          id: 2,
+          pos: {
+            left: '10%',
+            top: '60%',
+          },
+          desc: 'High price',
+        },
+      ],
       details: [
         {
           id: 1,
@@ -196,12 +301,19 @@ export default function ProductSwiper() {
                       </div>
                     </div>
                     <div className="productSwiper__slide-right">
-                      <Image
-                        src={item.img}
-                        width={228}
-                        height={695}
-                        alt=""
-                      />
+                      <div className="productSwiper__img">
+                        <Image src={item.img} fill alt="" />
+                        {item.description?.map((info) => {
+                          return (
+                            <ProductPoint
+                              key={info.id}
+                              id={info.id}
+                              position={info.pos}
+                              desc={info.desc}
+                            />
+                          );
+                        })}
+                      </div>
                       {item.details.map((elem) => {
                         return (
                           <div

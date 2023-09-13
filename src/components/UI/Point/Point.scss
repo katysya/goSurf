@@ -32,7 +32,7 @@
     z-index: 5;
     border-radius: 6px;
     display: none;
-    animation: beach 0.5s;
+    animation: info 0.5s;
   }
 
   &__top {
@@ -121,14 +121,5 @@
     .point__beach {
       display: flex;
     }
-  }
-}
-
-@keyframes beach {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
