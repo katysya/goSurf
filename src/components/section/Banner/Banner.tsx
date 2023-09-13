@@ -1,7 +1,7 @@
 import MainSwiper from '../../Swipers/MainSwiper/MainSwiper';
 import Sidebar from '../../layout/Sidebar/Sidebar';
 
-import './banner.scss';
+import './Banner.scss';
 
 export default function Banner() {
   return (

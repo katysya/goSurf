@@ -13,11 +13,12 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './mainSwiper.scss';
+import './MainSwiper.scss';
 
 import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
 import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
 import slide1 from '../../../../public/MainSwiper/Slide1.jpg';
+import map from '../../../../public/MainSwiper/map.png';
 
 export default function MainSwiper() {
   const swiperRef = useRef<SwiperCore>();
@@ -85,6 +86,9 @@ export default function MainSwiper() {
           {beach.map((item, index) => {
             return (
               <SwiperSlide key={item.id}>
+                <div className="mainSwiper__map">
+                  <Image src={map} fill alt="" />
+                </div>
                 <Image src={slide1} fill={true} alt="" />
                 <div className="mainSwiper__info">
                   <div className="mainSwiper__info-top">
