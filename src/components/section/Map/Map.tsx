@@ -1,10 +1,11 @@
 import Title from '@/components/UI/Title/Title';
 import Subtitle from '@/components/UI/Subtitle/Subtitle';
+import Point from '@/components/UI/Point/Point';
 import Image from 'next/image';
-import './map.scss';
+import './Map.scss';
 
 import map from '../../../../public/Map/map.png';
-import Point from '@/components/UI/Point/Point';
+import Flag from '../../../../public/Map/Flag.png';
 
 export default function Map() {
   const points = [
@@ -120,15 +121,21 @@ export default function Map() {
   return (
     <section className="map" id="map">
       <Title title="Surf" />
-      <div className="map__subtitle">
-        <Subtitle
-          name="Current location"
-          desc="California"
-          country="USA"
-          position={2}
-        />
+      <div className="map__flag">
+        <Image src={Flag} fill alt="" />
+      </div>
+      <div className="container">
+        <div className="map__subtitle">
+          <Subtitle
+            name="Current location"
+            desc="California"
+            country="USA"
+            position={2}
+          />
+        </div>
       </div>
       <div className="map__image">
+        <div>34.0501 N -118.2446 W</div>
         {points.map((item) => {
           return (
             <Point

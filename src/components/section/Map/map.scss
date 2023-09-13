@@ -1,5 +1,6 @@
 .map {
   margin-top: 157px;
+  position: relative;
 
   &__subtitle {
     display: flex;
@@ -12,6 +13,14 @@
     width: calc(100vw - 181px);
     height: calc((100vw - 181px) / 2);
     margin: 0 auto;
+  }
+
+  &__flag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 7%;
+    height: 30%;
   }
 
   .points {
