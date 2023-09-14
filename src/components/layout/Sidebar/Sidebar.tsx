@@ -23,36 +23,36 @@ export default function Sidebar() {
       <div className="sidebar__navigation">
         <ul className="sidebar__list">
           <li>
-            <Link href="#map" className="sidebar__link">
+            <a href="#map" className="sidebar__link">
               <div className="sidebar__link-img">
                 <Image src={surf} width={60} height={50} alt="" />
               </div>
               <p className="sidebar__link-name">Surf</p>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="#travel" className="sidebar__link">
+            <a href="#travel" className="sidebar__link">
               <div className="sidebar__link-img">
                 <Image src={travel} width={50} height={32} alt="" />
               </div>
               <p className="">Travel</p>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="#sleep" className="sidebar__link">
+            <a href="#sleep" className="sidebar__link">
               <div className="sidebar__link-img">
                 <Image src={sleep} width={39} height={40} alt="" />
               </div>
               <p className="sidebar__link-name">Sleep</p>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="#shop" className="sidebar__link">
+            <a href="#shop" className="sidebar__link">
               <div className="sidebar__link-img">
                 <Image src={shop} width={22} height={44} alt="" />
               </div>
               <p className="sidebar__link-name">Shop</p>
-            </Link>
+            </a>
           </li>
         </ul>
         <div className="sidebar__date">
