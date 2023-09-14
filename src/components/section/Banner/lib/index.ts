@@ -1,0 +1,1 @@
+export { beach } from './mock';

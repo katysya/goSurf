@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { EffectFade, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
+import { StaticImageData } from 'next/image';
 import Image from 'next/image';
 
 import 'swiper/css';
@@ -30,11 +31,9 @@ interface ISlide {
   titleBottom: String;
   nameBottom: String;
   countryBottom: String;
-  icon: String;
-  slide: String;
-  img: String;
-  imgWidth: Number;
-  imgHeight: Number;
+  icon: any;
+  slide: StaticImageData;
+  img: StaticImageData;
   data: IData[];
 }
 
@@ -43,7 +42,7 @@ interface IInfo {
   info: ISlide[];
 }
 
-export default function InfoSwiper(props: IInfo) {
+export default function InfoSwiper({ info }: IInfo) {
   const swiperRef = useRef<SwiperCore>();
 
   return (
@@ -86,9 +85,9 @@ export default function InfoSwiper(props: IInfo) {
               </div>
             </div>
           </div>
-          {props.info.map((item) => {
+          {info.map((item, index) => {
             return (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={index}>
                 <div className="infoSwiper__slide">
                   <div className="infoSwiper__slide-data">
                     <Image
@@ -125,8 +124,8 @@ export default function InfoSwiper(props: IInfo) {
                     <Image
                       src={item.img}
                       className="infoSwiper__airline"
-                      width={item.imgWidth}
-                      height={item.imgHeight}
+                      width={900}
+                      height={400}
                       alt=""
                     />
                   </div>

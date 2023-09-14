@@ -9,6 +9,7 @@ import {
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import Image from 'next/image';
+import { StaticImageData } from 'next/image';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -17,42 +18,23 @@ import './MainSwiper.scss';
 
 import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
 import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
-import slide1 from '../../../../public/MainSwiper/Slide1.jpg';
+
 import map from '../../../../public/MainSwiper/map.png';
 
-export default function MainSwiper() {
-  const swiperRef = useRef<SwiperCore>();
+interface ISlide {
+  id: Number;
+  digit: String;
+  name: String;
+  picture: StaticImageData;
+  condition: String;
+}
 
-  const beach = [
-    {
-      id: 1,
-      number: '01',
-      name: 'North Shore',
-      picture: 'slide1',
-      condition: 'radical',
-    },
-    {
-      id: 2,
-      number: '02',
-      name: 'South Shore',
-      picture: 'slide1',
-      condition: 'radical',
-    },
-    {
-      id: 3,
-      number: '03',
-      name: 'West Shore',
-      picture: 'slide1',
-      condition: 'radical',
-    },
-    {
-      id: 4,
-      number: '04',
-      name: 'East Shore',
-      picture: 'slide1',
-      condition: 'radical',
-    },
-  ];
+interface IInfo {
+  slides: Array<ISlide>;
+}
+
+export default function MainSwiper({ slides }: IInfo) {
+  const swiperRef = useRef<SwiperCore>();
 
   return (
     <section className="mainSwiper">
@@ -83,13 +65,13 @@ export default function MainSwiper() {
             swiperRef.current = swiper;
           }}
         >
-          {beach.map((item, index) => {
+          {slides.map((item, index) => {
             return (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={index}>
                 <div className="mainSwiper__map">
                   <Image src={map} fill alt="" />
                 </div>
-                <Image src={slide1} fill={true} alt="" />
+                <Image src={item.picture} fill={true} alt="" />
                 <div className="mainSwiper__info">
                   <div className="mainSwiper__info-top">
                     <div className="mainSwiper__desc">Surf</div>
@@ -109,12 +91,10 @@ export default function MainSwiper() {
           })}
         </Swiper>
         <div className="mainSwiper__bottom">
-          {beach.map((item, index) => {
+          {slides.map((item, index) => {
             return (
               <div key={index} className="mainSwiper__item">
-                <div className="mainSwiper__number">
-                  {item.number}
-                </div>
+                <div className="mainSwiper__number">{item.digit}</div>
                 <div className="mainSwiper__beach"> {item.name} </div>
               </div>
             );
