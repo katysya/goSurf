@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import location from '../../../assets/images/banner/location.svg';
-import surf from '../../../assets/images/banner/surf.svg';
-import travel from '../../../assets/images/banner/travel.svg';
-import sleep from '../../../assets/images/banner/sleep.svg';
-import shop from '../../../assets/images/banner/shop.svg';
+import location from '../../../../public/Sidebar/location.svg';
+import surf from '../../../../public/Sidebar/surf.svg';
+import travel from '../../../../public/Sidebar/travel.svg';
+import sleep from '../../../../public/Sidebar/sleep.svg';
+import shop from '../../../../public/Sidebar/shop.svg';
 
 import './Sidebar.scss';
 
