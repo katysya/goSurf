@@ -13,8 +13,8 @@ import 'swiper/css/navigation';
 import './ProductSwiper.scss';
 
 /* Picture */
-import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
-import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
+import arrowRight from '../../../../public/Swiper/swiperRight.svg';
+import arrowLeft from '../../../../public/Swiper/swiperLeft.svg';
 import icon from '../../../../public/Shop/Star.svg';
 import InfoLink from '@/components/UI/InfoLink/InfoLink';
 import background from '../../../../public/Shop/bg.png';

@@ -16,8 +16,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './MainSwiper.scss';
 
-import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
-import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
+import arrowRight from '../../../../public/Swiper/swiperRight.svg';
+import arrowLeft from '../../../../public/Swiper/swiperLeft.svg';
 
 import map from '../../../../public/MainSwiper/map.png';
 

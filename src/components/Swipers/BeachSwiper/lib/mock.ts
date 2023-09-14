@@ -1,7 +1,7 @@
-import Slide1 from '../../../../assets/images/beachSwiper/img1.jpg';
-import Slide2 from '../../../../assets/images/beachSwiper/img2.jpg';
-import Slide3 from '../../../../assets/images/beachSwiper/img3.jpg';
-import Slide4 from '../../../../assets/images/beachSwiper/img4.jpg';
+import Slide1 from '../../../../../public/BeachSwiper/img1.jpg';
+import Slide2 from '../../../../../public/BeachSwiper/img2.jpg';
+import Slide3 from '../../../../../public/BeachSwiper/img3.jpg';
+import Slide4 from '../../../../../public/BeachSwiper/img4.jpg';
 
 export const mockSlides = [
   {

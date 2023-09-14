@@ -13,8 +13,8 @@ import 'swiper/css/navigation';
 import './BeachSwiper.scss';
 
 /* Picture */
-import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
-import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
+import arrowRight from '../../../../public/Swiper/swiperRight.svg';
+import arrowLeft from '../../../../public/Swiper/swiperLeft.svg';
 
 /* Data */
 import { mockSlides } from './lib';
