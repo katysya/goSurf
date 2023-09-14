@@ -6,9 +6,10 @@ import { Swiper as SwiperCore } from 'swiper/types';
 import { StaticImageData } from 'next/image';
 import Image from 'next/image';
 
+/* Style */
 import 'swiper/css';
 import 'swiper/css/navigation';
-import './infoSwiper.scss';
+import './InfoSwiper.scss';
 
 /* Picture */
 import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
@@ -16,13 +17,11 @@ import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
 import Subtitle from '@/components/UI/Subtitle/Subtitle';
 
 /* Interface */
-//Данные для нижнего блока
 interface IData {
   nameValue: String;
   value: String;
 }
 
-//Данные для слайда
 interface ISlide {
   id: Number;
   titleTop: String;
@@ -37,7 +36,6 @@ interface ISlide {
   data: IData[];
 }
 
-//Interface для свойства (Props)
 interface IInfo {
   info: ISlide[];
 }
@@ -125,7 +123,7 @@ export default function InfoSwiper({ info }: IInfo) {
                       src={item.img}
                       className="infoSwiper__airline"
                       width={900}
-                      height={400}
+                      height={500}
                       alt=""
                     />
                   </div>

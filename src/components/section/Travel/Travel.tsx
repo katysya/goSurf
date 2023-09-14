@@ -1,13 +1,16 @@
 import Image from 'next/image';
-
 import InfoSwiper from '@/components/Swipers/InfoSwiper/InfoSwiper';
 import InfoLink from '@/components/UI/InfoLink/InfoLink';
 import Title from '@/components/UI/Title/Title';
 
-import { data } from './lib';
+/* Style */
+import './Travel.scss';
+
+/* Picture */
 import glass from '../../../../public/Travel/glass.png';
 
-import './travel.scss';
+/* Data */
+import { data } from './lib';
 
 export default function Travel() {
   return (

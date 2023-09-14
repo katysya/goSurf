@@ -2,11 +2,15 @@ import Title from '@/components/UI/Title/Title';
 import Subtitle from '@/components/UI/Subtitle/Subtitle';
 import Point from '@/components/UI/Point/Point';
 import Image from 'next/image';
+
+/* Style */
 import './Map.scss';
 
+/* Picture */
 import map from '../../../../public/Map/map.png';
 import Flag from '../../../../public/Map/Flag.png';
 
+/* Data */
 import { points } from './lib';
 
 export default function Map() {

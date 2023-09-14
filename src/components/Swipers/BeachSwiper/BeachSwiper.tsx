@@ -7,18 +7,20 @@ import { Swiper as SwiperCore } from 'swiper/types';
 import Image from 'next/image';
 import Logo from '@/components/UI/Logo/Logo';
 
+/* Style */
 import 'swiper/css';
 import 'swiper/css/navigation';
-import './beachSwiper.scss';
+import './BeachSwiper.scss';
 
+/* Picture */
 import arrowRight from '../../../assets/images/mainSwiper/swiperRight.svg';
 import arrowLeft from '../../../assets/images/mainSwiper/swiperLeft.svg';
 
+/* Data */
 import { mockSlides } from './lib';
 
 export default function BeachSwiper() {
   const swiperRef = useRef<SwiperCore>();
-
   const [dataSwiper, setDataSwiper] = useState(mockSlides);
 
   return (
