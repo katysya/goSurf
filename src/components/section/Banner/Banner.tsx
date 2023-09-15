@@ -11,7 +11,7 @@ export default function Banner() {
   return (
     <section className="banner">
       <div className="banner__text">go surf</div>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <MainSwiper slides={beach} />
     </section>
   );

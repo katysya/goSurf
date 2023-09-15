@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <div>
       <Banner />
-      <Map />
+      {/* <Map />
       <BeachSwiper />
       <Travel />
       <Sleep />
       <Shop />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

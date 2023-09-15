@@ -18,13 +18,13 @@ import './MainSwiper.scss';
 
 import arrowRight from '../../../../public/Swiper/swiperRight.svg';
 import arrowLeft from '../../../../public/Swiper/swiperLeft.svg';
-
 import map from '../../../../public/MainSwiper/map.png';
 
 interface ISlide {
   id: Number;
   digit: String;
   name: String;
+  abbreviation: String;
   picture: StaticImageData;
   condition: String;
 }
@@ -96,6 +96,9 @@ export default function MainSwiper({ slides }: IInfo) {
               <div key={index} className="mainSwiper__item">
                 <div className="mainSwiper__number">{item.digit}</div>
                 <div className="mainSwiper__beach"> {item.name} </div>
+                <div className="mainSwiper__beach mainSwiper__beach-mobile">
+                  {item.abbreviation}
+                </div>
               </div>
             );
           })}

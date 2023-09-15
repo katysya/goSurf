@@ -106,10 +106,9 @@
   &__desc {
     position: relative;
     color: #fff;
-    font-size: 22px;
-    font-style: normal;
+    font-size: calc(16px + 6 * (100vw - 320px) / 1600);
     font-weight: 400;
-    line-height: 32px;
+    line-height: 145%;
     letter-spacing: 7.333px;
     text-transform: uppercase;
     opacity: 0.5;
@@ -130,19 +129,19 @@
 
   &__name {
     color: #fff;
-    font-size: 80px;
+    font-size: calc(25px + 55 * (100vw - 320px) / 1600);
     font-style: normal;
     font-weight: 800;
-    line-height: 86px;
+    line-height: 107%;
     text-transform: uppercase;
   }
 
   &__condition {
     color: #fff;
-    font-size: 40px;
+    font-size: calc(18px + 22 * (100vw - 320px) / 1600);
     font-style: normal;
     font-weight: 800;
-    line-height: 86px;
+    line-height: 110%;
     text-transform: uppercase;
   }
 
@@ -168,18 +167,105 @@
 
   &__number {
     color: #fff;
-    font-size: 24px;
+    font-size: calc(14px + 10 * (100vw - 320px) / 1600);
     font-style: normal;
     font-weight: 800;
-    line-height: 34px;
+    line-height: 145%;
     text-transform: uppercase;
   }
 
   &__beach {
     color: #fff;
-    font-size: 16px;
+    font-size: calc(9px + 6 * (100vw - 320px) / 1600);
     font-style: normal;
     font-weight: 300;
-    line-height: 19px;
+    line-height: 118%;
+
+    &-mobile {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .mainSwiper {
+    &__info {
+      gap: 20px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 100px;
+    }
+
+    .swiper-pagination-bullets {
+      gap: 20px;
+    }
+
+    &__bottom {
+      gap: 20px;
+    }
+
+    &__item {
+      margin: 0 4px;
+      width: 100px;
+    }
+
+    &__beach {
+      display: none;
+
+      &-mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .mainSwiper {
+    &__info {
+      right: 30px;
+    }
+
+    &__navigation {
+      right: 30px;
+    }
+
+    .swiper-pagination-bullets {
+      padding-right: 30px;
+    }
+
+    &__bottom {
+      right: 30px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .mainSwiper {
+    &__map {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .mainSwiper {
+    .swiper-pagination-bullet {
+      width: 40px;
+    }
+
+    .swiper-pagination-bullets {
+      gap: 10px;
+      padding-right: 15px;
+    }
+
+    &__bottom {
+      gap: 10px;
+      right: 15px;
+    }
+
+    &__item {
+      width: 40px;
+    }
   }
 }
