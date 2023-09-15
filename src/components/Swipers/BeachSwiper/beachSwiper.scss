@@ -143,6 +143,8 @@
 
 @media (max-width: 900px) {
   .beachSwiper {
+    margin-bottom: 100px;
+
     &__top {
       padding: 0 30px;
     }
@@ -161,6 +163,8 @@
 
 @media (max-width: 500px) {
   .beachSwiper {
+    margin-bottom: 60px;
+
     &__top {
       margin-bottom: 0;
     }
