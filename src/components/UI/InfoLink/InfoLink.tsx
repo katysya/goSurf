@@ -19,7 +19,9 @@ export default function InfoLink({
       <div className="linkInfo__left">{leftText}</div>
       <div className="linkInfo__right">
         {rightText}
-        <Image src={arrow} width={25} height={20} alt="" />
+        <div className="linkInfo__img">
+          <Image src={arrow} fill alt="" />
+        </div>
       </div>
     </a>
   );

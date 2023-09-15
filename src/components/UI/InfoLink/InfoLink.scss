@@ -5,7 +5,7 @@
   flex-direction: row;
   align-items: center;
   color: white;
-  font-size: calc(20px + 20 * (100vw - 320px) / 1600);
+  font-size: calc(14px + 26 * (100vw - 320px) / 1600);
   font-weight: 800;
   line-height: 90%;
   text-transform: uppercase;
@@ -31,12 +31,24 @@
       top: 46%;
     }
   }
+
+  &__img {
+    position: relative;
+    width: 25px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 600px) {
   .linkInfo {
     &__right {
-      padding: 12px 10px 15px 15px;
+      padding: 7px 10px 10px 12px;
+      gap: 5px;
+    }
+
+    &__img {
+      width: 15px;
+      height: 10px;
     }
   }
 }

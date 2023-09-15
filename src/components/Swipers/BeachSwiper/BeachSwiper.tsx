@@ -6,6 +6,7 @@ import { useRef } from 'react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import Image from 'next/image';
 import Logo from '@/components/UI/Logo/Logo';
+import InfoLink from '@/components/UI/InfoLink/InfoLink';
 
 /* Style */
 import 'swiper/css';
@@ -48,21 +49,25 @@ export default function BeachSwiper() {
           }}
           modules={[Autoplay, EffectFade, Navigation]}
           initialSlide={2}
-          slidesPerView={4}
+          slidesPerView={2}
+          breakpoints={{
+            800: {
+              slidesPerView: 3,
+            },
+            1300: {
+              slidesPerView: 4,
+            },
+          }}
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
         >
           <SwiperSlide></SwiperSlide>
-          <SwiperSlide></SwiperSlide>
+          <SwiperSlide className="empty"></SwiperSlide>
           {dataSwiper.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <a
-                  href="#"
-                  target="_blank"
-                  className="beachSwiper__swiper-slide"
-                >
+                <div className="beachSwiper__swiper-slide">
                   <Image
                     src={item.picture}
                     fill
@@ -80,17 +85,21 @@ export default function BeachSwiper() {
                           {item.textBeach}
                         </div>
                       </div>
-                      <div className="beachSwiper__swiper-logo">
-                        <Logo leftText="View" rightText="Surf" />
+                      <div className="beachSwiper__swiper-link">
+                        <InfoLink
+                          link=""
+                          leftText="view"
+                          rightText="surf"
+                        />
                       </div>
                     </div>
                   </div>
-                </a>
+                </div>
               </SwiperSlide>
             );
           })}
-          <SwiperSlide></SwiperSlide>
-          <SwiperSlide></SwiperSlide>
+          <SwiperSlide className="empty"></SwiperSlide>
+          <SwiperSlide className="empty"></SwiperSlide>
         </Swiper>
       </div>
     </div>

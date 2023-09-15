@@ -13,8 +13,8 @@ export default function Home() {
     <div>
       <Banner />
       <Map />
-      {/* <BeachSwiper />
-      <Travel />
+      <BeachSwiper />
+      {/* <Travel />
       <Sleep />
       <Shop /> */}
       <Footer />
