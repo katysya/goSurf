@@ -1,4 +1,4 @@
-import './subtitle.scss';
+import './Subtitle.scss';
 
 interface IProps {
   name: String;

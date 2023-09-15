@@ -3,12 +3,12 @@
 .title {
   position: relative;
   width: fit-content;
-  max-width: 400px;
+  max-width: calc(100px + 300 * (100vw - 320px) / 1600);
   width: 100%;
 
   &__name {
     color: #fff;
-    font-size: 80px;
+    font-size: calc(30px + 50 * (100vw - 320px) / 1600);
     text-transform: uppercase;
     text-align: end;
   }
@@ -16,10 +16,10 @@
   &__desc {
     position: absolute;
     color: #fff;
-    font-size: 200px;
+    font-size: calc(50px + 150 * (100vw - 320px) / 1600);
     font-style: normal;
     font-weight: 800;
-    line-height: 156px;
+    line-height: 78%;
     text-transform: uppercase;
     opacity: 0.02;
     top: 30%;

@@ -9,9 +9,9 @@
     position: relative;
     color: #fff;
     text-align: right;
-    font-size: 22px;
+    font-size: calc(10px + 12 * (100vw - 320px) / 1600);
     font-weight: 300;
-    line-height: 32px;
+    line-height: 145%;
     letter-spacing: 7.333px;
     text-transform: uppercase;
     opacity: 0.5;
@@ -23,15 +23,16 @@
       background-color: #fff;
       opacity: 0.5;
       width: 80px;
+      width: calc(20px + 60 * (100vw - 320px) / 1600);
     }
   }
 
   &__desc {
     color: #fff;
     text-align: right;
-    font-size: 40px;
+    font-size: calc(18px + 22 * (100vw - 320px) / 1600);
     font-weight: 800;
-    line-height: 86px;
+    line-height: 215%;
     text-transform: uppercase;
 
     span {
@@ -45,7 +46,7 @@
     .subtitle__name {
       &::before {
         top: 50%;
-        left: -105px;
+        left: -30%;
       }
     }
   }
@@ -57,6 +58,30 @@
       &::before {
         top: 50%;
         left: 105%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .subtitle {
+    &--right {
+      .subtitle__name {
+        &::before {
+          left: -20%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .subtitle {
+    &--right {
+      .subtitle__name {
+        &::before {
+          left: -15%;
+        }
       }
     }
   }

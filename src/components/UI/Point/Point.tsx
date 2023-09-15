@@ -33,23 +33,31 @@ export default function Point({
           <div className="point__top">
             <div className="point__arrow">
               <div className="point__name">{beach}</div>
-              <Image src={Arrow} alt="" />
+              <div className="point__arrow-img">
+                <Image src={Arrow} alt="" fill />
+              </div>
             </div>
             <div className="point__place">{place}</div>
           </div>
           <div className="point__data">
             <div className="point__data-block">
-              <Image src={Surf} alt="" />
+              <div className="point__data-block-img">
+                <Image src={Surf} alt="" fill />
+              </div>
               <p className="point__data-block-name">{surf}</p>
               <p className="point__data-block-desc">Surf (FT)</p>
             </div>
             <div className="point__data-block">
-              <Image src={Water} alt="" />
+              <div className="point__data-block-img">
+                <Image src={Water} alt="" fill />
+              </div>
               <p className="point__data-block-name">{tide}</p>
               <p className="point__data-block-desc">Surf (FT)</p>
             </div>
             <div className="point__data-block">
-              <Image src={Winde} alt="" />
+              <div className="point__data-block-img">
+                <Image src={Winde} alt="" fill />
+              </div>
               <p className="point__data-block-name">{wind}</p>
               <p className="point__data-block-desc">Surf (FT)</p>
             </div>

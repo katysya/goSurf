@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <div>
       <Banner />
-      {/* <Map />
-      <BeachSwiper />
+      <Map />
+      {/* <BeachSwiper />
       <Travel />
       <Sleep />
       <Shop /> */}
