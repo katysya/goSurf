@@ -5,9 +5,9 @@
   flex-direction: row;
   align-items: center;
   color: white;
-  font-size: 40px;
+  font-size: calc(20px + 20 * (100vw - 320px) / 1600);
   font-weight: 800;
-  line-height: 36px;
+  line-height: 90%;
   text-transform: uppercase;
   gap: 19px;
   width: fit-content;
@@ -29,6 +29,14 @@
       background-color: white;
       left: -10px;
       top: 46%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .linkInfo {
+    &__right {
+      padding: 12px 10px 15px 15px;
     }
   }
 }
