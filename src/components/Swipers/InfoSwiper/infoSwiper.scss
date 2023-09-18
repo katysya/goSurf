@@ -17,6 +17,7 @@
       object-fit: cover;
       width: 100%;
       max-width: 1115px;
+      z-index: -1;
     }
 
     &-block {
@@ -32,7 +33,7 @@
 
     &-data {
       position: relative;
-      height: 780px;
+      height: calc(400px + 380 * (100vw - 320px) / 1600);
 
       .container {
         display: flex;
@@ -98,16 +99,6 @@
   }
 }
 
-@media (max-width: 1000px) {
-  .infoSwiper {
-    &__slide {
-      &-data {
-        height: 500px;
-      }
-    }
-  }
-}
-
 @media (max-width: 900px) {
   .infoSwiper {
     &__slide {
@@ -130,6 +121,27 @@
   .infoSwiper {
     .container {
       grid-template-columns: repeat(2, 1fr);
+      row-gap: 20px;
+    }
+
+    &__block {
+      flex-direction: column;
+    }
+
+    &__nameValue {
+      writing-mode: horizontal-tb;
+      transform: rotate(0deg);
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .infoSwiper {
+    &__slide {
+      &-block {
+        flex-direction: column;
+      }
     }
   }
 }

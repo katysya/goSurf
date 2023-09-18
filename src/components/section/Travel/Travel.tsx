@@ -21,13 +21,11 @@ export default function Travel() {
       <InfoSwiper info={data} />
       <div className="travel__bottom">
         <InfoLink link="#" leftText="Book" rightText="Flight" />
-        <Image
-          className="travel__img"
-          src={glass}
-          width={320}
-          height={564}
-          alt=""
-        />
+        <div className="travel__img">
+          <div className="travel__img-container">
+            <Image src={glass} fill alt="" />
+          </div>
+        </div>
       </div>
     </section>
   );

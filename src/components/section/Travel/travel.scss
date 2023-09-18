@@ -11,5 +11,12 @@
     position: absolute;
     top: -250px;
     right: 0;
+
+    &-container {
+      position: relative;
+      width: 320px;
+      width: calc(220px + 100 * (100vw - 320px) / 1600);
+      height: calc(464px + 100 * (100vw - 320px) / 1600);
+    }
   }
 }
