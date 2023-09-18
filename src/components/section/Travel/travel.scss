@@ -11,12 +11,25 @@
     position: absolute;
     top: -250px;
     right: 0;
+    z-index: -1;
 
     &-container {
       position: relative;
       width: 320px;
-      width: calc(220px + 100 * (100vw - 320px) / 1600);
-      height: calc(464px + 100 * (100vw - 320px) / 1600);
+      width: calc(150px + 220 * (100vw - 320px) / 1600);
+      height: calc(280px + 220 * (100vw - 320px) / 1600);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .travel {
+    &__img {
+      top: -90px;
+    }
+
+    &__bottom {
+      margin: 50px 0 150px 0;
     }
   }
 }
