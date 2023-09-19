@@ -119,7 +119,7 @@ export default function ProductSwiper({ info }: IInfo) {
                           </div>
                         </div>
                       </div>
-                      <div>
+                      <div className="productSwiper__link">
                         <InfoLink
                           link=""
                           leftText="Drop"
@@ -148,12 +148,9 @@ export default function ProductSwiper({ info }: IInfo) {
                               className="productSwiper__slide-block"
                               key={index}
                             >
-                              <Image
-                                src={elem.img}
-                                width={105}
-                                height={105}
-                                alt=""
-                              />
+                              <div className="productSwiper__slide-block-img">
+                                <Image src={elem.img} fill alt="" />
+                              </div>
                               <div className="productSwiper__slide-block-desc">
                                 <p className="productSwiper__slide-block-name">
                                   {elem.name}
