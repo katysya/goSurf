@@ -15,8 +15,8 @@ export default function Home() {
       <Map />
       <BeachSwiper />
       <Travel />
-      {/* <Sleep />
-      <Shop /> */}
+      <Sleep />
+      {/* <Shop /> */}
       <Footer />
     </div>
   );

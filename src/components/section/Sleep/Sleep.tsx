@@ -21,13 +21,11 @@ export default function Sleep() {
       <InfoSwiper info={data} />
       <div className="sleep__bottom">
         <InfoLink link="#" leftText="Book" rightText="Stay" />
-        <Image
-          className="sleep__img"
-          src={flower}
-          width={280}
-          height={400}
-          alt=""
-        />
+        <div className="sleep__img">
+          <div className="sleep__img-container">
+            <Image className="sleep__img" src={flower} fill alt="" />
+          </div>
+        </div>
       </div>
     </section>
   );
