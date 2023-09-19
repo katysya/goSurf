@@ -16,7 +16,7 @@ export default function Home() {
       <BeachSwiper />
       <Travel />
       <Sleep />
-      {/* <Shop /> */}
+      <Shop />
       <Footer />
     </div>
   );

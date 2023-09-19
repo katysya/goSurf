@@ -98,23 +98,25 @@ export default function ProductSwiper({ info }: IInfo) {
                 <SwiperSlide key={index}>
                   <div className="productSwiper__slide">
                     <div className="productSwiper__slide-left">
-                      <Subtitle
-                        name="Style"
-                        desc={item.name}
-                        country={item.country}
-                        position={1}
-                      />
-                      <div className="productSwiper__price">
-                        <div className="productSwiper__icon">
-                          <Image
-                            src={icon}
-                            width={80}
-                            height={22}
-                            alt=""
-                          />
-                        </div>
-                        <div className="productSwiper__cost">
-                          {item.price}
+                      <div className="productSwiper__slide-top">
+                        <Subtitle
+                          name="Style"
+                          desc={item.name}
+                          country={item.country}
+                          position={1}
+                        />
+                        <div className="productSwiper__price">
+                          <div className="productSwiper__icon">
+                            <Image
+                              src={icon}
+                              width={80}
+                              height={22}
+                              alt=""
+                            />
+                          </div>
+                          <div className="productSwiper__cost">
+                            {item.price}
+                          </div>
                         </div>
                       </div>
                       <div>
@@ -139,29 +141,31 @@ export default function ProductSwiper({ info }: IInfo) {
                           );
                         })}
                       </div>
-                      {item.details.map((elem, index) => {
-                        return (
-                          <div
-                            className="productSwiper__slide-block"
-                            key={index}
-                          >
-                            <Image
-                              src={elem.img}
-                              width={105}
-                              height={105}
-                              alt=""
-                            />
-                            <div className="productSwiper__slide-block-desc">
-                              <p className="productSwiper__slide-block-name">
-                                {elem.name}
-                              </p>
-                              <p className="productSwiper__slide-block-price">
-                                {elem.price}
-                              </p>
+                      <div className="productSwiper__details">
+                        {item.details.map((elem, index) => {
+                          return (
+                            <div
+                              className="productSwiper__slide-block"
+                              key={index}
+                            >
+                              <Image
+                                src={elem.img}
+                                width={105}
+                                height={105}
+                                alt=""
+                              />
+                              <div className="productSwiper__slide-block-desc">
+                                <p className="productSwiper__slide-block-name">
+                                  {elem.name}
+                                </p>
+                                <p className="productSwiper__slide-block-price">
+                                  {elem.price}
+                                </p>
+                              </div>
                             </div>
-                          </div>
-                        );
-                      })}
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 </SwiperSlide>

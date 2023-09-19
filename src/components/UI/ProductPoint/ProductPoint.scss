@@ -44,7 +44,7 @@
 
   &__desc {
     color: #fff;
-    font-size: 24px;
+    font-size: calc(12px + 12 * (100vw - 320px) / 1600);
     font-weight: 800;
     line-height: 24px;
     text-transform: uppercase;
@@ -61,6 +61,14 @@
       &__info {
         display: block;
       }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .productPoint {
+    &__desc {
+      font-weight: 400;
     }
   }
 }
