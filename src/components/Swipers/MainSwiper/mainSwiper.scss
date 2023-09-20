@@ -118,12 +118,12 @@
     &::after {
       position: absolute;
       content: '';
-      width: 80px;
+      width: calc(40px + 40 * (100vw - 320px) / 1600);
       height: 1px;
       background-color: #fff;
       opacity: 0.5;
       top: 50%;
-      left: -94px;
+      right: 110%;
     }
   }
 

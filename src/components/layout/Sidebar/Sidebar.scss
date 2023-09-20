@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: calc(100px + 100 * (100vw - 320px) / 1600);
+  width: calc(80px + 120 * (100vw - 320px) / 1600);
   height: 100%;
   top: 0;
   left: 0;
@@ -17,14 +17,15 @@
   &__logo {
     display: flex;
     flex-direction: column;
-    font-size: 60px;
+    font-size: calc(40px + 20 * (100vw - 320px) / 1600);
     font-weight: 800;
-    line-height: 86px;
+    line-height: 150%;
     text-transform: uppercase;
 
     &-top {
       background-color: $mint;
       height: 200px;
+      height: calc(150px + 50 * (100vw - 320px) / 1600);
       padding: 18px 10px;
       display: flex;
       flex-direction: row;
@@ -67,7 +68,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 37px;
+    gap: calc(20px + 17 * (100vw - 320px) / 1600);
   }
 
   &__link {
@@ -98,16 +99,16 @@
     gap: 10px;
 
     &-number {
-      font-size: 72px;
+      font-size: calc(40px + 32 * (100vw - 320px) / 1600);
+      line-height: 130%;
       font-weight: 800;
-      line-height: 64px;
       text-transform: uppercase;
     }
 
     &-monthAndYear {
-      font-size: 16px;
+      font-size: calc(12px + 4 * (100vw - 320px) / 1600);
       font-weight: 300;
-      line-height: 19px;
+      line-height: 130%;
     }
   }
 
@@ -123,13 +124,5 @@
       flex-direction: row;
       align-items: center;
     }
-  }
-}
-
-@media (max-width: 500px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
   }
 }
