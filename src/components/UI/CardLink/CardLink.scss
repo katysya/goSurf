@@ -1,0 +1,52 @@
+@import '../../../assets/styles/main.scss';
+
+.cardLink {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 36px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+
+  &__right {
+    position: relative;
+    background-color: rgba(74, 246, 205, 0.7);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    gap: 5px;
+    transition: background-color 0.3s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      top: 50%;
+      left: -8%;
+      background-color: #ffffff;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    width: 24px;
+    height: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    .cardLink__right {
+      background-color: rgba(74, 246, 205, 1);
+    }
+
+    .cardLink__arrow {
+      opacity: 1;
+    }
+  }
+}

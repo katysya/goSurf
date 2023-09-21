@@ -6,7 +6,7 @@ import { useRef } from 'react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import Image from 'next/image';
 import Logo from '@/components/UI/Logo/Logo';
-import InfoLink from '@/components/UI/InfoLink/InfoLink';
+import CardLink from '@/components/UI/CardLink/CardLink';
 
 /* Style */
 import 'swiper/css';
@@ -86,7 +86,7 @@ export default function BeachSwiper() {
                         </div>
                       </div>
                       <div className="beachSwiper__swiper-link">
-                        <InfoLink
+                        <CardLink
                           link=""
                           leftText="view"
                           rightText="surf"
