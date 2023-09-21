@@ -6,6 +6,7 @@
 
   &__circle {
     background-color: $mint;
+    position: relative;
     box-shadow: (0px 0px 35px rgba(74, 246, 205, 0.84));
     width: 24px;
     height: 24px;
@@ -13,6 +14,21 @@
     z-index: 10;
     border-radius: 50%;
     transition: border-radius 0.2s;
+
+    &:after {
+      content: '';
+      left: 0;
+      top: 0;
+      position: absolute;
+      background-color: $mint;
+      border-radius: 50%;
+      z-index: -5;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      -webkit-animation: ping 0.8s ease-in-out infinite both;
+      animation: ping 0.7s ease-in-out infinite both;
+    }
   }
 
   &__info {

@@ -81,41 +81,6 @@
   }
 }
 
-@-webkit-keyframes ping {
-  0% {
-    -webkit-transform: scale(0.2);
-    transform: scale(0.2);
-    opacity: 0.8;
-  }
-  80% {
-    -webkit-transform: scale(2);
-    transform: scale(2);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(3);
-    transform: scale(3);
-    opacity: 0;
-  }
-}
-@keyframes ping {
-  0% {
-    -webkit-transform: scale(0.2);
-    transform: scale(0.2);
-    opacity: 0.8;
-  }
-  80% {
-    -webkit-transform: scale(2);
-    transform: scale(2);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: scale(3);
-    transform: scale(3);
-    opacity: 0;
-  }
-}
-
 @media (max-width: 500px) {
   .productPoint {
     &__info {
