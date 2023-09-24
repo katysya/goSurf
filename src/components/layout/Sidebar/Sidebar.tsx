@@ -24,32 +24,32 @@ export default function Sidebar() {
         <ul className="sidebar__list">
           <li>
             <a href="#map" className="sidebar__link">
-              <div className="sidebar__link-img">
-                <Image src={surf} width={60} height={50} alt="" />
+              <div className="sidebar__link-img surf">
+                <Image src={surf} fill alt="" />
               </div>
               <p className="sidebar__link-name">Surf</p>
             </a>
           </li>
           <li>
             <a href="#travel" className="sidebar__link">
-              <div className="sidebar__link-img">
-                <Image src={travel} width={50} height={32} alt="" />
+              <div className="sidebar__link-img travel">
+                <Image src={travel} fill alt="" />
               </div>
               <p className="">Travel</p>
             </a>
           </li>
           <li>
             <a href="#sleep" className="sidebar__link">
-              <div className="sidebar__link-img">
-                <Image src={sleep} width={39} height={40} alt="" />
+              <div className="sidebar__link-img sleep">
+                <Image src={sleep} fill alt="" />
               </div>
               <p className="sidebar__link-name">Sleep</p>
             </a>
           </li>
           <li>
             <a href="#shop" className="sidebar__link">
-              <div className="sidebar__link-img">
-                <Image src={shop} width={22} height={44} alt="" />
+              <div className="sidebar__link-img shop">
+                <Image src={shop} fill alt="" />
               </div>
               <p className="sidebar__link-name">Shop</p>
             </a>

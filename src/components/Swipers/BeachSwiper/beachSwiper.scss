@@ -172,11 +172,12 @@
     &__swiper {
       .swiper-slide {
         height: 380px;
+        margin-right: 0px;
       }
-    }
 
-    .empty {
-      display: none;
+      .empty {
+        display: none;
+      }
     }
   }
 }

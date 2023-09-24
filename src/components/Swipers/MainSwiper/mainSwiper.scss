@@ -73,8 +73,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 43%;
-    height: 50%;
+    width: calc(220px + 500 * (100vw - 1000px) / 920);
+    height: calc(130px + 360 * (100vw - 1000px) / 920);
     z-index: 2;
   }
 
@@ -184,6 +184,35 @@
     &-mobile {
       display: none;
     }
+  }
+}
+
+.animateMap {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  width: calc(220px + 500 * (100vw - 1000px) / 920);
+  height: calc(130px + 360 * (100vw - 1000px) / 920);
+  z-index: 2;
+
+  svg {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .path {
+    stroke: white;
+    stroke-width: 2;
+    stroke-dasharray: 5188;
+    stroke-dashoffset: 5188;
+    animation: draw 4s linear infinite;
+  }
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
   }
 }
 

@@ -48,7 +48,7 @@ export default function BeachSwiper() {
             delay: 2500,
           }}
           modules={[Autoplay, EffectFade, Navigation]}
-          initialSlide={2}
+          initialSlide={1}
           slidesPerView={2}
           breakpoints={{
             800: {
@@ -98,7 +98,7 @@ export default function BeachSwiper() {
               </SwiperSlide>
             );
           })}
-          <SwiperSlide className="empty"></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
           <SwiperSlide className="empty"></SwiperSlide>
         </Swiper>
       </div>
