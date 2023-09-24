@@ -119,13 +119,11 @@ export default function InfoSwiper({ info }: IInfo) {
                         />
                       </div>
                     </div>
-                    <Image
-                      src={item.img}
-                      className="infoSwiper__airline"
-                      width={900}
-                      height={500}
-                      alt=""
-                    />
+                    <div className="infoSwiper__airline">
+                      <div className="infoSwiper__slide-block-img">
+                        <Image src={item.img} fill alt="" />
+                      </div>
+                    </div>
                   </div>
                   <div className="infoSwiper__info">
                     <div className="container">
