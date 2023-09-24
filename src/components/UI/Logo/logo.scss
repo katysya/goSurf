@@ -5,7 +5,7 @@
   flex-direction: row;
   align-items: center;
   color: white;
-  font-size: calc(30px + 10 * (100vw - 320px) / 1600);
+  font-size: calc(30px + 10 * $size);
   font-weight: 800;
   line-height: 90%;
   text-transform: uppercase;

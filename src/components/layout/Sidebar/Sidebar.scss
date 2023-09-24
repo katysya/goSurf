@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: calc(70px + 130 * (100vw - 320px) / 1600);
+  width: calc(70px + 130 * $size);
   height: 100%;
   top: 0;
   left: 0;
@@ -17,7 +17,7 @@
   &__logo {
     display: flex;
     flex-direction: column;
-    font-size: calc(20px + 20 * (100vw - 320px) / 1600);
+    font-size: calc(20px + 20 * $size);
     font-weight: 800;
     line-height: 150%;
     text-transform: uppercase;
@@ -25,7 +25,7 @@
     &-top {
       background-color: $mint;
       height: 200px;
-      height: calc(60px + 70 * (100vw - 320px) / 1600);
+      height: calc(60px + 70 * $size);
       padding: 18px 5px;
       display: flex;
       flex-direction: row;
@@ -46,11 +46,11 @@
         content: '';
         position: absolute;
         height: 1px;
-        width: calc(10px + 10 * (100vw - 320px) / 1600);
+        width: calc(10px + 10 * $size);
         background-color: #ffffff;
         transform: rotate(-90deg);
         top: -2px;
-        left: calc(30px + 60 * (100vw - 320px) / 1600);
+        left: calc(30px + 60 * $size);
       }
     }
 
@@ -68,7 +68,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: calc(15px + 15 * (100vw - 320px) / 1600);
+    gap: calc(15px + 15 * $size);
   }
 
   &__link {
@@ -83,8 +83,8 @@
       justify-content: center;
       align-items: flex-end;
       position: relative;
-      width: calc(25px + 25 * (100vw - 320px) / 1600);
-      height: calc(25px + 25 * (100vw - 320px) / 1600);
+      width: calc(25px + 25 * $size);
+      height: calc(25px + 25 * $size);
     }
 
     &:hover {
@@ -101,14 +101,14 @@
     gap: 10px;
 
     &-number {
-      font-size: calc(40px + 32 * (100vw - 320px) / 1600);
+      font-size: calc(40px + 32 * $size);
       line-height: 130%;
       font-weight: 800;
       text-transform: uppercase;
     }
 
     &-monthAndYear {
-      font-size: calc(12px + 4 * (100vw - 320px) / 1600);
+      font-size: calc(12px + 4 * $size);
       font-weight: 300;
       line-height: 130%;
     }
@@ -128,7 +128,7 @@
     }
 
     &-city {
-      font-size: calc(10px + 6 * (100vw - 320px) / 1600);
+      font-size: calc(10px + 6 * $size);
       line-height: 110%;
     }
   }

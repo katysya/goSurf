@@ -1,3 +1,5 @@
+@import '../../../assets/styles/main.scss';
+
 .travel {
   &__bottom {
     position: relative;
@@ -16,8 +18,8 @@
     &-container {
       position: relative;
       width: 320px;
-      width: calc(150px + 220 * (100vw - 320px) / 1600);
-      height: calc(280px + 220 * (100vw - 320px) / 1600);
+      width: calc(150px + 220 * $size);
+      height: calc(280px + 220 * $size);
     }
   }
 }

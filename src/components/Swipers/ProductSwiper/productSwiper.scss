@@ -1,3 +1,5 @@
+@import '../../../assets/styles/main.scss';
+
 .productSwiper {
   position: relative;
   margin-top: 110px;
@@ -57,8 +59,8 @@
       &-img {
         width: 105px;
         height: 105px;
-        width: calc(80px + 25 * (100vw - 320px) / 1600);
-        height: calc(80px + 25 * (100vw - 320px) / 1600);
+        width: calc(80px + 25 * $size);
+        height: calc(80px + 25 * $size);
         position: relative;
       }
 
@@ -70,7 +72,7 @@
 
       &-name {
         color: #fff;
-        font-size: calc(12px + 6 * (100vw - 320px) / 1600);
+        font-size: calc(12px + 6 * $size);
         font-weight: 400;
         line-height: 120%;
         letter-spacing: 8px;
@@ -82,7 +84,7 @@
         text-align: center;
         color: #fff;
         text-align: center;
-        font-size: calc(12px + 4 * (100vw - 320px) / 1600);
+        font-size: calc(12px + 4 * $size);
         font-style: normal;
         font-weight: 800;
         line-height: 180%;
@@ -98,7 +100,7 @@
 
   &__cost {
     color: #fff;
-    font-size: calc(20px + 12 * (100vw - 320px) / 1600);
+    font-size: calc(20px + 12 * $size);
     font-weight: 800;
     line-height: 120%;
     text-transform: uppercase;
@@ -106,8 +108,8 @@
 
   &__img {
     position: relative;
-    width: calc(114px + 114 * (100vw - 320px) / 1600);
-    height: calc(378px + 317 * (100vw - 320px) / 1600);
+    width: calc(114px + 114 * $size);
+    height: calc(378px + 317 * $size);
   }
 }
 

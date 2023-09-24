@@ -9,7 +9,7 @@
     position: relative;
     color: #fff;
     text-align: right;
-    font-size: calc(10px + 12 * (100vw - 320px) / 1600);
+    font-size: calc(10px + 12 * $size);
     font-weight: 300;
     line-height: 145%;
     letter-spacing: 7.333px;
@@ -23,14 +23,14 @@
       background-color: #fff;
       opacity: 0.5;
       width: 80px;
-      width: calc(20px + 60 * (100vw - 320px) / 1600);
+      width: calc(20px + 60 * $size);
     }
   }
 
   &__desc {
     color: #fff;
     text-align: right;
-    font-size: calc(18px + 22 * (100vw - 320px) / 1600);
+    font-size: calc(18px + 22 * $size);
     font-weight: 800;
     line-height: 215%;
     text-transform: uppercase;

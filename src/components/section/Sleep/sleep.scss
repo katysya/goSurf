@@ -1,3 +1,5 @@
+@import '../../../assets/styles/main.scss';
+
 .sleep {
   &__bottom {
     position: relative;
@@ -15,8 +17,8 @@
 
     &-container {
       position: relative;
-      width: calc(100px + 180 * (100vw - 320px) / 1600);
-      height: calc(150px + 250 * (100vw - 320px) / 1600);
+      width: calc(100px + 180 * $size);
+      height: calc(150px + 250 * $size);
     }
   }
 }

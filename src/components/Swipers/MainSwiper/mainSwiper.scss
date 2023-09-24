@@ -106,7 +106,7 @@
   &__desc {
     position: relative;
     color: #fff;
-    font-size: calc(16px + 6 * (100vw - 320px) / 1600);
+    font-size: calc(16px + 6 * $size);
     font-weight: 400;
     line-height: 145%;
     letter-spacing: 7.333px;
@@ -118,7 +118,7 @@
     &::after {
       position: absolute;
       content: '';
-      width: calc(40px + 40 * (100vw - 320px) / 1600);
+      width: calc(40px + 40 * $size);
       height: 1px;
       background-color: #fff;
       opacity: 0.5;
@@ -129,7 +129,7 @@
 
   &__name {
     color: #fff;
-    font-size: calc(25px + 55 * (100vw - 320px) / 1600);
+    font-size: calc(25px + 55 * $size);
     font-style: normal;
     font-weight: 800;
     line-height: 107%;
@@ -138,7 +138,7 @@
 
   &__condition {
     color: #fff;
-    font-size: calc(18px + 22 * (100vw - 320px) / 1600);
+    font-size: calc(18px + 22 * $size);
     font-style: normal;
     font-weight: 800;
     line-height: 110%;
@@ -167,7 +167,7 @@
 
   &__number {
     color: #fff;
-    font-size: calc(14px + 10 * (100vw - 320px) / 1600);
+    font-size: calc(14px + 10 * $size);
     font-style: normal;
     font-weight: 800;
     line-height: 145%;
@@ -176,7 +176,7 @@
 
   &__beach {
     color: #fff;
-    font-size: calc(9px + 6 * (100vw - 320px) / 1600);
+    font-size: calc(9px + 6 * $size);
     font-style: normal;
     font-weight: 300;
     line-height: 118%;

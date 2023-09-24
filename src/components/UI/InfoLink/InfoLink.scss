@@ -3,7 +3,7 @@
 .button {
   letter-spacing: 3px;
   text-decoration: none;
-  font-size: calc(14px + 26 * (100vw - 320px) / 1600);
+  font-size: calc(14px + 26 * $size);
   line-height: 90%;
   position: relative;
   text-transform: uppercase;
@@ -39,7 +39,7 @@
   flex-direction: row;
   align-items: center;
   color: white;
-  font-size: calc(14px + 26 * (100vw - 320px) / 1600);
+  font-size: calc(14px + 26 * $size);
   font-weight: 800;
   line-height: 90%;
   text-transform: uppercase;

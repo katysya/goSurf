@@ -61,7 +61,7 @@
 
   &__desc {
     color: #fff;
-    font-size: calc(10px + 14 * (100vw - 320px) / 1600);
+    font-size: calc(10px + 14 * $size);
     font-weight: 800;
     line-height: 120%;
     text-transform: uppercase;
