@@ -24,6 +24,10 @@ export default function BeachSwiper() {
   const swiperRef = useRef<SwiperCore>();
   const [dataSwiper, setDataSwiper] = useState(mockSlides);
 
+  const [swiper, setSwiper] = useState<SwiperCore | null>(null);
+
+  const slideTo = (index) => swiper.slideTo(index);
+
   return (
     <div className="beachSwiper">
       <div className="beachSwiper__top">
@@ -44,6 +48,7 @@ export default function BeachSwiper() {
       </div>
       <div className="beachSwiper__swiper">
         <Swiper
+          onSwiper={setSwiper}
           autoplay={{
             delay: 2500,
           }}

@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { StaticImageData } from 'next/image';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 /* Style */
 import 'swiper/css';
@@ -15,6 +16,7 @@ import './InfoSwiper.scss';
 import arrowRight from '../../../../public/Swiper/swiperRight.svg';
 import arrowLeft from '../../../../public/Swiper/swiperLeft.svg';
 import Subtitle from '@/components/UI/Subtitle/Subtitle';
+import Airline from '../../../../public/Travel/airline.png';
 
 /* Interface */
 interface IData {
@@ -119,11 +121,6 @@ export default function InfoSwiper({ info }: IInfo) {
                         />
                       </div>
                     </div>
-                    <div className="infoSwiper__airline">
-                      <div className="infoSwiper__slide-block-img">
-                        <Image src={item.img} fill alt="" />
-                      </div>
-                    </div>
                   </div>
                   <div className="infoSwiper__info">
                     <div className="container">
@@ -148,6 +145,25 @@ export default function InfoSwiper({ info }: IInfo) {
               </SwiperSlide>
             );
           })}
+          <motion.div
+            className="infoSwiper__airline"
+            animate={{
+              scale: [1, 2, 2, 1, 1],
+              rotate: [0, 0, 180, 180, 0],
+              borderRadius: ['0%', '0%', '50%', '50%', '0%'],
+            }}
+            transition={{
+              duration: 2,
+              ease: 'easeInOut',
+              times: [0, 0.2, 0.5, 0.8, 1],
+              repeat: Infinity,
+              repeatDelay: 1,
+            }}
+          >
+            <div className="infoSwiper__slide-block-img">
+              <Image src={Airline} fill alt="" />
+            </div>
+          </motion.div>
         </Swiper>
       </div>
     </section>

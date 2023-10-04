@@ -73,13 +73,13 @@ body {
     opacity: 0.8;
   }
   80% {
-    -webkit-transform: scale(2);
-    transform: scale(2);
+    -webkit-transform: scale(3);
+    transform: scale(3);
     opacity: 0;
   }
   100% {
-    -webkit-transform: scale(3);
-    transform: scale(3);
+    -webkit-transform: scale(4);
+    transform: scale(4);
     opacity: 0;
   }
 }
@@ -91,13 +91,13 @@ body {
     opacity: 0.8;
   }
   80% {
-    -webkit-transform: scale(2);
-    transform: scale(2);
+    -webkit-transform: scale(3);
+    transform: scale(3);
     opacity: 0;
   }
   100% {
-    -webkit-transform: scale(3);
-    transform: scale(3);
+    -webkit-transform: scale(4);
+    transform: scale(4);
     opacity: 0;
   }
 }
