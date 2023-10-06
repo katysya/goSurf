@@ -17,9 +17,30 @@
 
     &-container {
       position: relative;
-      width: 320px;
       width: calc(150px + 220 * $size);
-      height: calc(280px + 220 * $size);
+      height: calc(280px + 250 * $size);
+    }
+  }
+
+  &__swiper {
+    position: relative;
+  }
+
+  &__airline {
+    position: absolute;
+    z-index: 1;
+
+    &-img {
+      width: 565px;
+      height: 300px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .travel {
+    &__airline {
+      display: none;
     }
   }
 }

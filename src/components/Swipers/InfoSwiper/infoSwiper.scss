@@ -1,4 +1,6 @@
 .infoSwiper {
+  position: relative;
+
   &__navigation {
     position: absolute;
     top: 250px;
@@ -101,21 +103,6 @@
 
     .infoSwiper__value {
       opacity: 1;
-    }
-  }
-
-  &__airline {
-    position: absolute;
-    right: 3%;
-    bottom: 30%;
-    z-index: 1;
-  }
-}
-
-@media (max-width: 1200px) {
-  .infoSwiper {
-    &__airline {
-      display: none;
     }
   }
 }

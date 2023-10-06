@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { StaticImageData } from 'next/image';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 /* Style */
 import 'swiper/css';
@@ -16,7 +15,6 @@ import './InfoSwiper.scss';
 import arrowRight from '../../../../public/Swiper/swiperRight.svg';
 import arrowLeft from '../../../../public/Swiper/swiperLeft.svg';
 import Subtitle from '@/components/UI/Subtitle/Subtitle';
-import Airline from '../../../../public/Travel/airline.png';
 
 /* Interface */
 interface IData {
@@ -145,16 +143,6 @@ export default function InfoSwiper({ info }: IInfo) {
               </SwiperSlide>
             );
           })}
-          <motion.div
-            className="infoSwiper__airline"
-            initial={{ scale: 1, right: '-20%', top: '40%' }}
-            whileInView={{ scale: 2.5, right: '120%', top: '10%' }}
-            transition={{ duration: 6 }}
-          >
-            <div className="infoSwiper__slide-block-img">
-              <Image src={Airline} fill alt="" />
-            </div>
-          </motion.div>
         </Swiper>
       </div>
     </section>
