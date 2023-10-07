@@ -29,11 +29,34 @@
   &__airline {
     position: absolute;
     z-index: 1;
+    animation: vibrate-1 4s linear 2s infinite both;
+    pointer-events: none;
 
     &-img {
-      width: 565px;
-      height: 300px;
+      width: 960px;
+      height: 462px;
     }
+  }
+}
+
+@keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-4px, 2px);
+  }
+  40% {
+    transform: translate(-4px, -2px);
+  }
+  60% {
+    transform: translate(4px, 2px);
+  }
+  80% {
+    transform: translate(4px, -2px);
+  }
+  100% {
+    transform: translate(0);
   }
 }
 

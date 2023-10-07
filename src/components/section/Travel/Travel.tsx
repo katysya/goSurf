@@ -25,9 +25,9 @@ export default function Travel() {
         <InfoSwiper info={data} />
         <motion.div
           className="travel__airline"
-          initial={{ scale: 1, right: '-20%', top: '40%' }}
-          whileInView={{ scale: 2.5, right: '130%', top: '10%' }}
-          transition={{ duration: 6 }}
+          initial={{ right: '-50%', top: '10%' }}
+          whileInView={{ right: '0%', top: '25%' }}
+          transition={{ duration: 1.5 }}
         >
           <div className="travel__airline-img">
             <Image src={Airline} fill alt="" />
