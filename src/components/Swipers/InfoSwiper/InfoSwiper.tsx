@@ -59,7 +59,7 @@ export default function InfoSwiper({ info }: IInfo) {
             <div className="container">
               <div className="swiper__navigation">
                 <button
-                  className="swiper__navigation-btn"
+                  className="swiper__navigation-btn navButton"
                   onClick={() => swiperRef.current?.slidePrev()}
                 >
                   <Image
@@ -70,7 +70,7 @@ export default function InfoSwiper({ info }: IInfo) {
                   />
                 </button>
                 <button
-                  className="swiper__navigation-btn"
+                  className="swiper__navigation-btn navButton"
                   onClick={() => swiperRef.current?.slideNext()}
                 >
                   <Image

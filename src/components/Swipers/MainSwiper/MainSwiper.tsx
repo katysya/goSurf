@@ -40,13 +40,13 @@ export default function MainSwiper({ slides }: IInfo) {
     <section className="mainSwiper">
       <div className="mainSwiper__navigation">
         <button
-          className="mainSwiper__navigation-btn"
+          className="mainSwiper__navigation-btn navButton"
           onClick={() => swiperRef.current?.slidePrev()}
         >
           <Image src={arrowLeft} width={25} height={20} alt="" />
         </button>
         <button
-          className="mainSwiper__navigation-btn"
+          className="mainSwiper__navigation-btn navButton"
           onClick={() => swiperRef.current?.slideNext()}
         >
           <Image src={arrowRight} width={25} height={20} alt="" />

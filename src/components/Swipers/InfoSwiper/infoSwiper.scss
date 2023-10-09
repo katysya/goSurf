@@ -3,7 +3,8 @@
 
   &__navigation {
     position: absolute;
-    top: 250px;
+    // top: 250px;
+    top: 330px;
     right: 0;
     z-index: 10;
     width: 100%;
@@ -18,7 +19,8 @@
     &-img {
       object-fit: cover;
       width: 100%;
-      max-width: 1115px;
+      // max-width: 1115px;
+      max-width: 1610px;
       z-index: -1;
     }
 

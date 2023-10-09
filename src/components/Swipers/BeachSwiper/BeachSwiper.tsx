@@ -33,13 +33,13 @@ export default function BeachSwiper() {
       <div className="beachSwiper__top">
         <div className="beachSwiper__navigation">
           <button
-            className="beachSwiper__navigation-btn"
+            className="beachSwiper__navigation-btn navButton"
             onClick={() => swiperRef.current?.slidePrev()}
           >
             <Image src={arrowLeft} width={25} height={20} alt="" />
           </button>
           <button
-            className="beachSwiper__navigation-btn"
+            className="beachSwiper__navigation-btn navButton"
             onClick={() => swiperRef.current?.slideNext()}
           >
             <Image src={arrowRight} width={25} height={20} alt="" />
