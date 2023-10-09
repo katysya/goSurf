@@ -19,8 +19,7 @@
     &-img {
       object-fit: cover;
       width: 100%;
-      // max-width: 1115px;
-      max-width: 1610px;
+      max-width: calc(570px + 1040 * ((100vw - 600px) / 3240));
       z-index: -1;
     }
 
@@ -109,6 +108,14 @@
   }
 }
 
+@media (max-width: 2200px) {
+  .infoSwiper {
+    &__navigation {
+      top: 270px;
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .infoSwiper {
     &__slide {
@@ -152,6 +159,10 @@
       &-block {
         flex-direction: column;
       }
+    }
+
+    &__navigation {
+      top: 65px;
     }
 
     &__block {

@@ -34,8 +34,8 @@
     animation: swing ease-in-out 1s infinite alternate;
 
     &-img {
-      width: 640px;
-      height: 320px;
+      width: calc(400px + 1000 * ((100vw - 1200px) / 2640));
+      height: calc(200px + 500 * ((100vw - 1200px) / 2640));
     }
   }
 }

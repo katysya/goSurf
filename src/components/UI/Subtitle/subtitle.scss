@@ -7,6 +7,7 @@
 
   &__name {
     position: relative;
+    width: fit-content;
     color: #fff;
     text-align: right;
     font-size: calc(10px + 12 * $size);
@@ -46,7 +47,7 @@
     .subtitle__name {
       &::before {
         top: 50%;
-        left: -80px;
+        right: 105%;
       }
     }
   }

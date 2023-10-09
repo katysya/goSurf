@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-  max-width: 3000px;
+  max-width: calc(1690px + 1510 * ((100vw - 1920px) / 1920));
   margin: 0 auto;
 }
 
@@ -113,9 +113,16 @@ body {
   }
 }
 
-@media (max-width: 2000px) {
-  .container {
-    max-width: 1690px;
+@media (max-width: 2200px) {
+  .navButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper {
+    &__navigation {
+      gap: 20px;
+    }
   }
 }
 
@@ -123,5 +130,12 @@ body {
   .container {
     max-width: 100%;
     margin: 0 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navButton {
+    width: 25px;
+    height: 25px;
   }
 }

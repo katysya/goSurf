@@ -74,6 +74,7 @@
     .swiper-slide {
       // height: 700px;
       height: 1400px;
+      height: calc(700px + 700 * ((100vw - 1920px) / 1920));
       width: 200px;
       margin-right: -40px;
 
@@ -167,6 +168,10 @@
 @media (max-width: 500px) {
   .beachSwiper {
     margin-bottom: 60px;
+
+    &__navigation {
+      gap: 20px;
+    }
 
     &__top {
       margin-bottom: 0;
