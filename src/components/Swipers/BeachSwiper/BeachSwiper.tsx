@@ -26,7 +26,7 @@ export default function BeachSwiper() {
 
   const [swiper, setSwiper] = useState<SwiperCore | null>(null);
 
-  const slideTo = (index) => swiper.slideTo(index);
+  // const slideTo = (index: any) => swiper.slideTo(index);
 
   return (
     <div className="beachSwiper">
