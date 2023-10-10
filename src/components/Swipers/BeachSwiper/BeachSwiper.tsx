@@ -11,7 +11,7 @@ import CardLink from '@/components/UI/CardLink/CardLink';
 /* Style */
 import 'swiper/css';
 import 'swiper/css/navigation';
-import './src/components/Swipers/BeachSwiper/BeachSwiper.scss';
+import '../components/Swipers/BeachSwiper/BeachSwiper.scss';
 
 /* Picture */
 import arrowRight from '../../../../public/Swiper/swiperRight.svg';
