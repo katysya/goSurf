@@ -11,10 +11,11 @@ import { Swiper as SwiperCore } from 'swiper/types';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 
+import './MainSwiper.scss';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './MainSwiper.scss';
 
 import arrowRight from '../../../../public/Swiper/swiperRight.svg';
 import arrowLeft from '../../../../public/Swiper/swiperLeft.svg';
