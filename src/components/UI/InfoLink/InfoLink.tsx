@@ -1,4 +1,4 @@
-import './InfoLink.scss';
+// import './InfoLink.scss';
 
 import arrow from '../../../../public/InfoLink/arrow.png';
 

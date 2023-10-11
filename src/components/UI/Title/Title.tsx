@@ -1,4 +1,4 @@
-import './Title.scss';
+// import './Title.scss';
 
 interface ITitle {
   title: string;
