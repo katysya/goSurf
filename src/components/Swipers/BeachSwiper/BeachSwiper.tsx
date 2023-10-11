@@ -9,9 +9,9 @@ import Logo from '@/components/UI/Logo/Logo';
 import CardLink from '@/components/UI/CardLink/CardLink';
 
 /* Style */
+import './BeachSwiper.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
-// import './BeachSwiper.scss';
 
 /* Picture */
 import arrowRight from '../../../../public/Swiper/swiperRight.svg';
