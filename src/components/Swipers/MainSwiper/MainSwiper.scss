@@ -1,0 +1,308 @@
+@import '../../../assets/styles/main.scss';
+
+.mainSwiper {
+  height: 100vh;
+  position: relative;
+  top: 0;
+  z-index: 1;
+
+  &__navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    justify-content: flex-end;
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    z-index: 10;
+
+    &-btn {
+      background-color: transparent;
+      cursor: pointer;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__swiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper {
+      height: 100%;
+
+      &-slide {
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .swiper-pagination {
+      // bottom: 70px;
+      bottom: 86px;
+      right: 0;
+    }
+
+    .swiper-pagination-bullet {
+      width: 200px;
+      height: 4px;
+      background-color: #ffffff;
+      border-radius: 0;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $mint;
+    }
+
+    .swiper-pagination-bullets {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      padding-right: 80px;
+      justify-content: flex-end;
+    }
+  }
+
+  &__map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(220px + 500 * (100vw - 1000px) / 920);
+    height: calc(130px + 360 * (100vw - 1000px) / 920);
+    z-index: 2;
+  }
+
+  &__info {
+    position: absolute;
+    width: fit-content;
+    bottom: 100px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    &-top,
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &-top {
+      gap: 5px;
+    }
+
+    &-bottom {
+      gap: 8px;
+    }
+  }
+
+  &__desc {
+    position: relative;
+    color: #fff;
+    font-size: calc(16px + 6 * $size);
+    font-weight: 400;
+    line-height: 145%;
+    letter-spacing: 7.333px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    width: fit-content;
+    text-align: end;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: calc(40px + 40 * $size);
+      height: 1px;
+      background-color: #fff;
+      opacity: 0.5;
+      top: 50%;
+      right: 110%;
+    }
+  }
+
+  &__name {
+    color: #fff;
+    font-size: calc(25px + 55 * $size);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 107%;
+    text-transform: uppercase;
+  }
+
+  &__condition {
+    color: #fff;
+    font-size: calc(18px + 22 * $size);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 35px;
+    right: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 40px;
+    z-index: 2;
+  }
+
+  &__item {
+    margin: 0 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+  }
+
+  &__number {
+    color: #fff;
+    font-size: calc(14px + 10 * $size);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 145%;
+    text-transform: uppercase;
+  }
+
+  &__beach {
+    color: #fff;
+    font-size: calc(9px + 6 * $size);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 118%;
+
+    &-mobile {
+      display: none;
+    }
+  }
+}
+
+.animateMap {
+  position: absolute;
+
+  z-index: 20;
+  top: 0;
+  right: 0;
+  width: calc(220px + 500 * (100vw - 1000px) / 920);
+  height: calc(130px + 360 * (100vw - 1000px) / 920);
+  z-index: 2;
+  pointer-events: none;
+
+  svg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .path {
+    stroke: white;
+    stroke-width: 2;
+    stroke-dasharray: 5188;
+    stroke-dashoffset: 5188;
+    animation: draw 4s linear infinite;
+  }
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .mainSwiper {
+    &__info {
+      gap: 20px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 100px;
+    }
+
+    .swiper-pagination-bullets {
+      gap: 20px;
+    }
+
+    &__bottom {
+      gap: 20px;
+    }
+
+    &__item {
+      margin: 0 4px;
+      width: 100px;
+    }
+
+    &__beach {
+      display: none;
+
+      &-mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .mainSwiper {
+    &__info {
+      right: 30px;
+    }
+
+    &__navigation {
+      right: 30px;
+    }
+
+    .swiper-pagination-bullets {
+      padding-right: 30px;
+    }
+
+    &__bottom {
+      right: 30px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .mainSwiper {
+    &__map {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .mainSwiper {
+    .swiper-pagination-bullet {
+      width: 40px;
+    }
+
+    .swiper-pagination-bullets {
+      gap: 10px;
+      padding-right: 15px;
+    }
+
+    &__navigation {
+      gap: 20px;
+    }
+
+    &__bottom {
+      gap: 10px;
+      right: 15px;
+    }
+
+    &__item {
+      width: 40px;
+    }
+  }
+}
