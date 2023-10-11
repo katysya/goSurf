@@ -4,12 +4,14 @@ import { EffectFade, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { StaticImageData } from 'next/image';
+
+import './InfoSwiper.scss';
 import Image from 'next/image';
 
 /* Style */
 import 'swiper/css';
 import 'swiper/css/navigation';
-import '/src/components/Swipers/InfoSwiper/InfoSwiper.scss';
+// import '/src/components/Swipers/InfoSwiper/InfoSwiper.scss';
 
 /* Picture */
 import arrowRight from '../../../../public/Swiper/swiperRight.svg';
