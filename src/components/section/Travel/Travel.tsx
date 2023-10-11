@@ -6,7 +6,7 @@ import Title from '@/components/UI/Title/Title';
 import { motion } from 'framer-motion';
 
 /* Style */
-import './Travel.scss';
+// import './Travel.scss';
 
 /* Picture */
 import glass from '../../../../public/Travel/glass.png';
