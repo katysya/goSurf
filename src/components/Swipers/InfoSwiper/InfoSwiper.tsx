@@ -9,7 +9,7 @@ import Image from 'next/image';
 /* Style */
 import 'swiper/css';
 import 'swiper/css/navigation';
-import './InfoSwiper.scss';
+import '/src/components/Swipers/InfoSwiper/InfoSwiper.scss';
 
 /* Picture */
 import arrowRight from '../../../../public/Swiper/swiperRight.svg';
