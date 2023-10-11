@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { StaticImageData } from 'next/image';
 
-import './InfoSwiper.scss';
+import '../InfoSwiper/InfoSwiper.scss';
 import Image from 'next/image';
 
 /* Style */
