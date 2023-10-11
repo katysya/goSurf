@@ -1,0 +1,70 @@
+@import '../../../assets/styles/main.scss';
+
+.sleep {
+  &__bottom {
+    position: relative;
+    margin: 70px 0 309px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__img {
+    position: absolute;
+    top: -150px;
+    right: 0;
+    z-index: -1;
+
+    &-container {
+      position: relative;
+      width: calc(50px + 90 * $size);
+      height: calc(75px + 125 * $size);
+    }
+  }
+
+  &__swiper {
+    position: relative;
+  }
+
+  &__hammock {
+    position: absolute;
+    z-index: 1;
+    right: 10%;
+    top: 35%;
+    animation: swing ease-in-out 1s infinite alternate;
+
+    &-img {
+      width: calc(400px + 1000 * ((100vw - 1200px) / 2640));
+      height: calc(200px + 500 * ((100vw - 1200px) / 2640));
+    }
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .sleep {
+    &__hammock {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .sleep {
+    &__bottom {
+      margin-bottom: 110px;
+    }
+
+    &__img {
+      top: -100px;
+    }
+  }
+}

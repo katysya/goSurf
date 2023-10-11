@@ -1,6 +1,6 @@
 import InfoLink from '@/components/UI/InfoLink/InfoLink';
 
-// import './Footer.scss';
+import './Footer.scss';
 
 export default function Footer() {
   return (

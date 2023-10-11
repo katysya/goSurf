@@ -1,0 +1,81 @@
+@import '../../../assets/styles/main.scss';
+
+.travel {
+  &__bottom {
+    position: relative;
+    margin: 70px 0 311px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__img {
+    position: absolute;
+    top: -250px;
+    right: 0;
+    z-index: -1;
+
+    &-container {
+      position: relative;
+      width: calc(150px + 220 * $size);
+      height: calc(280px + 250 * $size);
+    }
+  }
+
+  &__swiper {
+    position: relative;
+  }
+
+  &__airline {
+    position: absolute;
+    z-index: 1;
+    animation: vibrate-1 4s linear 2s infinite both;
+    pointer-events: none;
+
+    &-img {
+      width: 960px;
+      height: 462px;
+    }
+  }
+}
+
+@keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-4px, 2px);
+  }
+  40% {
+    transform: translate(-4px, -2px);
+  }
+  60% {
+    transform: translate(4px, 2px);
+  }
+  80% {
+    transform: translate(4px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .travel {
+    &__airline {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .travel {
+    &__img {
+      top: -90px;
+    }
+
+    &__bottom {
+      margin: 50px 0 150px 0;
+    }
+  }
+}
