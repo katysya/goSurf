@@ -44,9 +44,11 @@
       }
     }
 
-    .swiper-pagination {
-      // bottom: 70px;
-      bottom: 86px;
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: 35px;
       right: 0;
     }
 
@@ -148,7 +150,7 @@
 
   &__bottom {
     position: absolute;
-    bottom: 35px;
+    bottom: 45px;
     right: 80px;
     display: flex;
     flex-direction: row;
@@ -190,7 +192,7 @@
 
 .animateMap {
   position: absolute;
-
+  opacity: 0.5;
   z-index: 20;
   top: 0;
   right: 0;

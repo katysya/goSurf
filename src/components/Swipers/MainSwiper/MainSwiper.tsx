@@ -39,7 +39,7 @@ export default function MainSwiper({ slides }: IInfo) {
 
   return (
     <section className="mainSwiper">
-      <div className="mainSwiper__navigation">
+      <div className="mainSwiper__navigation swiper__navigation">
         <button
           className="mainSwiper__navigation-btn navButton"
           onClick={() => swiperRef.current?.slidePrev()}
