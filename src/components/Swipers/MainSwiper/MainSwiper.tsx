@@ -27,6 +27,7 @@ interface ISlide {
   name: String;
   abbreviation: String;
   picture: StaticImageData;
+  pictureMobile: StaticImageData;
   condition: String;
 }
 
@@ -121,7 +122,18 @@ export default function MainSwiper({ slides }: IInfo) {
                     </g>
                   </svg>
                 </div>
-                <Image src={item.picture} fill={true} alt="" />
+                <Image
+                  className="mainSwiper__img-desktop"
+                  src={item.picture}
+                  fill={true}
+                  alt=""
+                />
+                <Image
+                  className="mainSwiper__img-mobile"
+                  src={item.pictureMobile}
+                  fill={true}
+                  alt=""
+                />
                 <div className="mainSwiper__info">
                   <div className="mainSwiper__info-top">
                     <div className="mainSwiper__desc">Surf</div>

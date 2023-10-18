@@ -3,6 +3,10 @@ import slide1 from '../../../../../public/MainSwiper/Slide1.jpg';
 import slide2 from '../../../../../public/MainSwiper/Slide2.jpg';
 import slide3 from '../../../../../public/MainSwiper/Slide3.jpg';
 import slide4 from '../../../../../public/MainSwiper/Slide4.jpg';
+import slide1Mobile from '../../../../../public/MainSwiper/Slide1Mobile.jpg';
+import slide2Mobile from '../../../../../public/MainSwiper/Slide2Mobile.jpg';
+import slide3Mobile from '../../../../../public/MainSwiper/Slide3Mobile.jpg';
+import slide4Mobile from '../../../../../public/MainSwiper/Slide4Mobile.jpg';
 
 export const beach = [
   {
@@ -11,6 +15,7 @@ export const beach = [
     name: 'North Shore',
     abbreviation: 'NS',
     picture: slide1,
+    pictureMobile: slide1Mobile,
     condition: 'radical',
   },
   {
@@ -19,6 +24,7 @@ export const beach = [
     name: 'South Shore',
     abbreviation: 'SS',
     picture: slide2,
+    pictureMobile: slide2Mobile,
     condition: 'radical',
   },
   {
@@ -27,6 +33,7 @@ export const beach = [
     name: 'West Shore',
     abbreviation: 'WS',
     picture: slide3,
+    pictureMobile: slide3Mobile,
     condition: 'radical',
   },
   {
@@ -35,6 +42,7 @@ export const beach = [
     name: 'East Shore',
     abbreviation: 'ES',
     picture: slide4,
+    pictureMobile: slide4Mobile,
     condition: 'radical',
   },
 ];

@@ -28,6 +28,16 @@
     }
   }
 
+  &__img {
+    &-desktop {
+      display: block;
+    }
+
+    &-mobile {
+      display: none;
+    }
+  }
+
   &__swiper {
     width: 100%;
     height: 100%;
@@ -287,6 +297,16 @@
   .mainSwiper {
     .swiper-pagination-bullet {
       width: 40px;
+    }
+
+    &__img {
+      &-desktop {
+        display: none;
+      }
+
+      &-mobile {
+        display: block;
+      }
     }
 
     .swiper-pagination-bullets {
