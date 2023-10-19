@@ -1,3 +1,3 @@
 ![image](https://github.com/katysya/goSurf/assets/115551190/50a9787a-93e7-4c62-b830-c75cf48aac36)
 
-React.js + Next.js. Website GoSurf.
+Website GoSurf. Стэк: React.js, Next.js. Ссылка: [https://3d-car.gregor-z.ru/](https://vercel.com/katysya/go-surf)https://vercel.com/katysya/go-surf
